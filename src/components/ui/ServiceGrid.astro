@@ -41,7 +41,7 @@ const {
             itemClasses?.panel
           )}
         >
-          {(image)  && ( <Image
+    {(image)  && (  <div class="relative w-full aspect-w-16 aspect-h-9"><Image
             src={image}
             class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
             widths={[400, 900]}
@@ -53,8 +53,9 @@ const {
             loading="lazy"
             decoding="async"
           />
+    </div>
           )}
-          <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
+          <div class={twMerge('text-xl font-bold mt-2', titleClass, itemClasses?.title)}>{title}</div>
           {description && (
             <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
           )}
