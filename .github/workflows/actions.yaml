@@ -27,10 +27,11 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          folder: dist # The folder the action should deploy.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # Path to your built `dist` folder
       # - run: npm test
 
   check:
