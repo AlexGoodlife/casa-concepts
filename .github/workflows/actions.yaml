@@ -26,6 +26,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
       # - run: npm test
 
   check:
@@ -39,3 +41,13 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
