@@ -5,6 +5,8 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Services from '~/components/widgets/Services.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'Services',
@@ -16,9 +18,9 @@ const metadata = {
 
   <Hero
     tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    title="Get the plan that will turn your visions into a reality"
+    subtitle="Make your visions come true with our help!"
+    actions={[{ variant: 'primary', text: 'Start exploring', href: getPermalink('#list') }]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'AstroWind Hero Image',
@@ -27,62 +29,46 @@ const metadata = {
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
-    title="Explore our diverse templates"
+  <Services
+    id = "list"
+    title="Explore our diverse services"
     subtitle="Discover our selection below to streamline and elevate your projects."
     columns={3}
     items={[
       {
-        title: 'Educational',
+        title: 'Construction',
         description:
           'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
+        icon: 'tabler:building',
       },
       {
-        title: 'Interior Design',
+        title: 'Swimming pools',
         description:
           'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
+        icon: 'tabler:pool',
       },
       {
-        title: 'Photography',
+        title: 'Refurbishing',
         description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
+        icon: 'tabler:building-cog',
       },
       {
-        title: 'E-commerce',
+        title: 'Insulation',
         description:
           'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
+        icon: 'tabler:snowflake-off',
       },
       {
-        title: 'Blog',
+        title: 'Paint jobs',
         description:
           'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
+        icon: 'tabler:paint',
       },
       {
         title: 'Business',
         description:
           'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
         icon: 'tabler:building-store',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
-      },
-      {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
       },
     ]}
   />
@@ -91,39 +77,40 @@ const metadata = {
 
   <Content
     isReversed
+    id = "construction"
     items={[
       {
-        title: 'High-Quality Designs',
+        title: 'Houses',
         description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
+          'Build houses and stuff',
+        icon: 'tabler:circle',
       },
       {
-        title: 'Customization Tools',
+        title: 'Buildings',
         description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
+          'Build bigger buildings and stuff',
+        icon: 'tabler:circle',
       },
       {
-        title: 'Pre-Designed Elements',
+        title: 'Villas',
         description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
+          'Build villas or something',
+        icon: 'tabler:circle',
       },
       {
-        title: 'Preview and Mockup Views',
+        title: 'Gyms',
         description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
+          'Build a really big gym and stuff',
+        icon: 'tabler:circle',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      src: '~/assets/images/construction.jpg',
       alt: 'Features Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Construction</h3>
     </Fragment>
   </Content>
 
@@ -131,67 +118,167 @@ const metadata = {
 
   <Content
     isAfterContent
+    id = "pools"
     items={[
       {
-        title: 'Time Savings',
+        title: 'Indoor pools',
         description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
+          'Pools but indoor',
+        icon: 'tabler:circle',
       },
       {
-        title: 'Professional Appearance',
+        title: 'Outdoor pools',
         description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
-        icon: 'tabler:school',
+          'pools but outdoors',
+        icon: 'tabler:circle',
       },
       {
-        title: 'Cost-Efficiency',
+        title: 'Luxury pools',
         description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
-        icon: 'tabler:coin',
-      },
-      {
-        title: 'Instant Download',
-        description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
+          'pools but fancy',
+        icon: 'tabler:circle',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      src: '~/assets/images/pool.jpg',
       alt: 'Benefits Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Swimming pools</h3>
     </Fragment>
   </Content>
 
+  <Content
+    isAfterContent
+    isReversed
+    id = "refurbishing"
+    items={[
+      {
+        title: 'Home renovations',
+        description:
+          'Renovations of a home',
+        icon: 'tabler:circle',
+      },
+      {
+        title: 'Office renovations',
+        description:
+          'Renovations of an office',
+        icon: 'tabler:circle',
+      },
+      {
+        title: 'Exterior and Façade',
+        description:
+          'Exterior renovations',
+        icon: 'tabler:circle',
+      },
+      {
+        title: 'Ceiling and floor renovations',
+        description:
+          'Ceiling and floor renovations',
+        icon: 'tabler:circle',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/refurb.jpg',
+      alt: 'Benefits Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"> Refurbishing </h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    id = "insulation"
+    items={[
+      {
+        title: 'Exterior insulation',
+        description:
+          'Renovations of a home',
+        icon: 'tabler:circle',
+      },
+      {
+        title: 'Interior insulation',
+        description:
+          'Renovations of an office',
+        icon: 'tabler:circle',
+      },
+      {
+        title: 'On-screen insulation',
+        description:
+          'Exterior renovations',
+        icon: 'tabler:circle',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/insulation.jpg',
+      alt: 'Benefits Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Insulation</h3>
+    </Fragment>
+  </Content>
   <!-- Testimonials Widget *********** -->
 
+  <Content
+    isAfterContent
+    isReversed
+    id = "paint"
+    items={[
+      {
+        title: 'Exterior paint job',
+        description:
+          'Renovations of a home',
+        icon: 'tabler:circle',
+      },
+      {
+        title: 'Interior paint job',
+        description:
+          'Renovations of an office',
+        icon: 'tabler:circle',
+      },
+      {
+        title: 'Windows and doors',
+        description:
+          'Exterior renovations',
+        icon: 'tabler:circle',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/paint.jpg',
+      alt: 'Benefits Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Paint jobs</h3>
+    </Fragment>
+  </Content>
   <Testimonials
     title="Words from real customers"
     testimonials={[
       {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         name: 'Emily Kennedy',
-        job: 'Front-end developer',
+        job: 'Person',
         image: {
           src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
           alt: 'Emily Kennedy Image',
         },
       },
       {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
+        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         name: 'Sarah Hansen',
-        job: 'Photographer',
+        job: 'Other person',
         image: {
           src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
           alt: 'Sarah Hansen Image',
         },
       },
       {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         name: 'Mark Wilkinson',
         job: 'Small business owner',
         image: {
@@ -200,12 +287,6 @@ const metadata = {
         },
       },
     ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
   />
 
   <!-- CallToAction Widget *********** -->
@@ -213,12 +294,12 @@ const metadata = {
   <CallToAction
     actions={[
       {
-        variant: 'primary',
-        text: 'Start exploring',
+        variant: 'secondary',
+        text: 'Contact us',
         href: '/',
       },
     ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
+    title="Get in contact with us"
+    subtitle="We are sure to give you a fair price for whatever your needs are"
   />
 </Layout>

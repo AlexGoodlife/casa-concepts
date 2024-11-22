@@ -8,23 +8,7 @@ export const headerData = {
     },
     {
       text: 'About',
-      href: getPermalink('/about'),
-    },
-    {
-      text: 'Services',
-      links: [
-        {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#services'),
-        },
-        {
-          text: 'Services',
-          href: getPermalink('/services'),
-        },
-        {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
+      links : [
         {
           text: 'About us',
           href: getPermalink('/about'),
@@ -41,36 +25,37 @@ export const headerData = {
           text: 'Privacy policy',
           href: getPermalink('/privacy'),
         },
-      ],
+
+      ]
     },
     {
-      text: 'Portfolio',
-      links: [
+      text: 'Services',
+      links : [
         {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
+          text: 'Home',
+          href: getPermalink('/services'),
         },
         {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
+          text: 'Construction',
+          href: getPermalink('/services#construction'),
         },
         {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
+          text: 'Swimming pools',
+          href: getPermalink('/services#pools'),
         },
         {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
+          text: 'Refurbishing',
+          href: getPermalink('/services#refurbishing'),
         },
         {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
+          text: 'Insulation',
+          href: getPermalink('/services#insulation'),
         },
         {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
+          text: 'Paint jobs',
+          href: getPermalink('/services#paint'),
         },
-      ],
+      ]
     },
   ],
   actions: [{ text: 'Contact us', href: getPermalink('/contact'), target: '_blank' }],
@@ -79,47 +64,39 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Product',
-      links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
-      ],
-    },
-    {
-      title: 'Platform',
-      links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
-      ],
-    },
-    {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'About', href: getPermalink('/about') },
+        { text: 'Contact', href: getPermalink('/contact') },
+      ],
+    },
+    {
+      title: 'Services',
+      links: [
+        {
+          text: 'Home',
+          href: getPermalink('/services'),
+        },
+        {
+          text: 'Construction',
+          href: getPermalink('/services#construction'),
+        },
+        {
+          text: 'Swimming pools',
+          href: getPermalink('/services#pools'),
+        },
+        {
+          text: 'Refurbishing',
+          href: getPermalink('/services#refurbishing'),
+        },
+        {
+          text: 'Insulation',
+          href: getPermalink('/services#insulation'),
+        },
+        {
+          text: 'Paint jobs',
+          href: getPermalink('/services#paint'),
+        },
       ],
     },
   ],

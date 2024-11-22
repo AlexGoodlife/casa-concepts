@@ -69,6 +69,7 @@ const {
         />
       </div>
       <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+        <!-- sizes are sizes="(max-width: 768px) 100vw, 432px" -->
         {
           image && (
             <div class="relative m-auto max-w-4xl">
@@ -80,7 +81,6 @@ const {
                   width={500}
                   height={500}
                   widths={[400, 768]}
-                  sizes="(max-width: 768px) 100vw, 432px"
                   layout="responsive"
                   {...image}
                 />

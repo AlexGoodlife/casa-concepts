@@ -147,6 +147,8 @@ export interface Service{
   classes?: Record<string, string>;
   callToAction?: CallToAction;
   image?: string;
+  icon?: string;
+  href?: string;
 }
 
 export interface Price {

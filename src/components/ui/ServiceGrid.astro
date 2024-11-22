@@ -33,14 +33,18 @@ const {
         containerClass
       )}
     >
-  {items.map(({ title, description, image, callToAction, classes: itemClasses = {}}) => (
-        <div
+  {items.map(({ title, description, image, icon, callToAction, href, classes: itemClasses = {}}) => (
+        <a
           class={twMerge(
             'relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
             panelClass,
             itemClasses?.panel
-          )}
+          )} href= {href}  
         >
+
+          {(icon) && (
+            <Icon name={icon } class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
+          )}
     {(image)  && (  <div class="relative w-full aspect-w-16 aspect-h-9"><Image
             src={image}
             class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
@@ -49,7 +53,7 @@ const {
             sizes="(max-width: 900px) 400px, 900px"
             alt=""
             aspectRatio="16:9"
-            layout="cover"
+            layout="responsive"
             loading="lazy"
             decoding="async"
           />
@@ -64,7 +68,7 @@ const {
               <Button {...callToAction} />
             </div>
           )}
-        </div>
+  </a>
       ))}
     </div>
   )

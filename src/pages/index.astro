@@ -15,6 +15,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { Image } from 'astro:assets';
 import Services from '~/components/widgets/Services.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
@@ -36,7 +37,7 @@ const metadata = {
       },
       { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/house2.jpg', alt: 'House Hero Image' }}
+    image={{ src: '~/assets/images/house4.jpg', alt: 'House Hero Image' }}
   >
     <Fragment slot="title">
       Build stuff I think <span class="hidden xl:inline">from kitchens to whatever</span>
@@ -65,40 +66,46 @@ title="What you get with Company name"
     subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis vitae molestias maxime recusandae eligendi vero, voluptatem"
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Construction',
         description:
           'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        image:  '~/assets/images/house3.jpg'
+        image:  '~/assets/images/construction.jpg',
+        href: getPermalink('/services#construction'),
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Swimming pools',
         description:
           'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        image:  '~/assets/images/house4.jpg'
+        image:  '~/assets/images/pool.jpg',
+        href: getPermalink('/services#pools'),
       },
       {
-        title: 'Best Practices',
+        title: 'Refurbishing',
         description:
           'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        image:  '~/assets/images/house.jpg'
+        image:  '~/assets/images/refurb.jpg',
+        href: getPermalink('/services#refurbishing'),
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Paint jobs',
         description:
           'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        image:  '~/assets/images/house4.jpg'
+        image:  '~/assets/images/paint.jpg',
+        href: getPermalink('/services#paint'),
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Insulation',
         description:
           "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        image:  '~/assets/images/house.jpg'
+        image:  '~/assets/images/insulation.jpg',
+        href: getPermalink('/services#insulation'),
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Something else',
         description:
           'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        image:  '~/assets/images/house3.jpg'
+        image:  '~/assets/images/house3.jpg',
+        href: getPermalink('/services'),
       },
     ]}
   />
@@ -265,7 +272,7 @@ src: '~/assets/images/blueprint.jpg',
     stats={[
       { title: 'Clients', amount: '132' },
       { title: 'Projects', amount: '24' },
-      { title: 'Other metric', amount: '48' },
+      { title: 'Employees', amount: '48' },
     ]}
   />
 
@@ -278,7 +285,7 @@ src: '~/assets/images/blueprint.jpg',
         text: 'Get a quote',
         href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
-        icon: 'tabler:crop-1-1',
+        icon: 'tabler:arrow-right',
       },
     ]}
   >
