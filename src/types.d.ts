@@ -141,7 +141,7 @@ export interface Item {
   image?: Image;
 }
 
-export interface Service{
+export interface Service {
   title?: string;
   description?: string;
   classes?: Record<string, string>;

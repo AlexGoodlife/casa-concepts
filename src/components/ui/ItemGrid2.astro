@@ -32,7 +32,7 @@ const {
         containerClass
       )}
     >
-  {items.map(({ title, description, icon, callToAction, classes: itemClasses = {}, image }) => (
+      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {}, image }) => (
         <div
           class={twMerge(
             'relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',

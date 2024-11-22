@@ -3,11 +3,15 @@ import { getAsset } from '~/utils/permalinks';
 import { SITE } from 'astrowind:config';
 ---
 
-<div class = "flex">
-  <img src={getAsset("src/assets/images/generic.jpg")} alt="" class = "d-flex w-full h-full object-contain max-w-20 max-h-20">
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-   {SITE?.name}
-</span>
+<div class="flex">
+  <img
+    src={getAsset('src/assets/images/generic.jpg')}
+    alt=""
+    class="d-flex w-full h-full object-contain max-w-20 max-h-20"
+  />
+  <span
+    class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+  >
+    {SITE?.name}
+  </span>
 </div>

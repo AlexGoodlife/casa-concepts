@@ -1,11 +1,10 @@
 ---
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import Services from '~/components/widgets/Services.astro';
+import Service from '~/components/widgets/Services.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
@@ -29,8 +28,8 @@ const metadata = {
 
   <!-- Features2 Widget ************** -->
 
-  <Services
-    id = "list"
+  <Service
+    id="list"
     title="Explore our diverse services"
     subtitle="Discover our selection below to streamline and elevate your projects."
     columns={3}
@@ -77,30 +76,26 @@ const metadata = {
 
   <Content
     isReversed
-    id = "construction"
+    id="construction"
     items={[
       {
         title: 'Houses',
-        description:
-          'Build houses and stuff',
+        description: 'Build houses and stuff',
         icon: 'tabler:circle',
       },
       {
         title: 'Buildings',
-        description:
-          'Build bigger buildings and stuff',
+        description: 'Build bigger buildings and stuff',
         icon: 'tabler:circle',
       },
       {
         title: 'Villas',
-        description:
-          'Build villas or something',
+        description: 'Build villas or something',
         icon: 'tabler:circle',
       },
       {
         title: 'Gyms',
-        description:
-          'Build a really big gym and stuff',
+        description: 'Build a really big gym and stuff',
         icon: 'tabler:circle',
       },
     ]}
@@ -118,24 +113,21 @@ const metadata = {
 
   <Content
     isAfterContent
-    id = "pools"
+    id="pools"
     items={[
       {
         title: 'Indoor pools',
-        description:
-          'Pools but indoor',
+        description: 'Pools but indoor',
         icon: 'tabler:circle',
       },
       {
         title: 'Outdoor pools',
-        description:
-          'pools but outdoors',
+        description: 'pools but outdoors',
         icon: 'tabler:circle',
       },
       {
         title: 'Luxury pools',
-        description:
-          'pools but fancy',
+        description: 'pools but fancy',
         icon: 'tabler:circle',
       },
     ]}
@@ -152,30 +144,26 @@ const metadata = {
   <Content
     isAfterContent
     isReversed
-    id = "refurbishing"
+    id="refurbishing"
     items={[
       {
         title: 'Home renovations',
-        description:
-          'Renovations of a home',
+        description: 'Renovations of a home',
         icon: 'tabler:circle',
       },
       {
         title: 'Office renovations',
-        description:
-          'Renovations of an office',
+        description: 'Renovations of an office',
         icon: 'tabler:circle',
       },
       {
         title: 'Exterior and Façade',
-        description:
-          'Exterior renovations',
+        description: 'Exterior renovations',
         icon: 'tabler:circle',
       },
       {
         title: 'Ceiling and floor renovations',
-        description:
-          'Ceiling and floor renovations',
+        description: 'Ceiling and floor renovations',
         icon: 'tabler:circle',
       },
     ]}
@@ -185,30 +173,27 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"> Refurbishing </h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Refurbishing</h3>
     </Fragment>
   </Content>
 
   <Content
     isAfterContent
-    id = "insulation"
+    id="insulation"
     items={[
       {
         title: 'Exterior insulation',
-        description:
-          'Renovations of a home',
+        description: 'Renovations of a home',
         icon: 'tabler:circle',
       },
       {
         title: 'Interior insulation',
-        description:
-          'Renovations of an office',
+        description: 'Renovations of an office',
         icon: 'tabler:circle',
       },
       {
         title: 'On-screen insulation',
-        description:
-          'Exterior renovations',
+        description: 'Exterior renovations',
         icon: 'tabler:circle',
       },
     ]}
@@ -226,24 +211,21 @@ const metadata = {
   <Content
     isAfterContent
     isReversed
-    id = "paint"
+    id="paint"
     items={[
       {
         title: 'Exterior paint job',
-        description:
-          'Renovations of a home',
+        description: 'Renovations of a home',
         icon: 'tabler:circle',
       },
       {
         title: 'Interior paint job',
-        description:
-          'Renovations of an office',
+        description: 'Renovations of an office',
         icon: 'tabler:circle',
       },
       {
         title: 'Windows and doors',
-        description:
-          'Exterior renovations',
+        description: 'Exterior renovations',
         icon: 'tabler:circle',
       },
     ]}
@@ -260,7 +242,8 @@ const metadata = {
     title="Words from real customers"
     testimonials={[
       {
-        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        testimonial:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         name: 'Emily Kennedy',
         job: 'Person',
         image: {
@@ -269,7 +252,8 @@ const metadata = {
         },
       },
       {
-        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        testimonial:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         name: 'Sarah Hansen',
         job: 'Other person',
         image: {
@@ -278,7 +262,8 @@ const metadata = {
         },
       },
       {
-        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        testimonial:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         name: 'Mark Wilkinson',
         job: 'Small business owner',
         image: {

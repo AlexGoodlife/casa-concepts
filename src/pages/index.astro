@@ -1,19 +1,12 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import { Image } from 'astro:assets';
 import Services from '~/components/widgets/Services.astro';
 import { getPermalink } from '~/utils/permalinks';
 
@@ -24,16 +17,13 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
   <Hero2
     actions={[
       {
         variant: 'primary',
         text: 'Ask for a Quote',
-        href: 'https://github.com/onwidget/astrowind',
+        href: getPermalink('/contact'),
         target: '_blank',
-        // icon: 'tabler:download',
       },
       { text: 'Learn more', href: '#features' },
     ]}
@@ -41,7 +31,7 @@ const metadata = {
   >
     <Fragment slot="title">
       Build stuff I think <span class="hidden xl:inline">from kitchens to whatever</span>
-      <span class="text-accent dark:text-white highlight"> at your disposal </span> 
+      <span class="text-accent dark:text-white highlight"> at your disposal </span>
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -49,62 +39,57 @@ const metadata = {
         <span class="font-semibold">Company name</span> Something something something something something :))).</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">Company name: slogan.</span>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis vitae molestias maxime recusandae eligendi vero, voluptatem ipsam, ex minima assumenda aspernatur voluptatum.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis
+      vitae molestias maxime recusandae eligendi vero, voluptatem ipsam, ex minima assumenda aspernatur voluptatum.
     </Fragment>
-  </Hero>
-
-  <!-- Note Widget ******************* -->
-
-  <!-- <Note /> -->
-
-  <!-- Features Widget *************** -->
+  </Hero2>
 
   <Services
     id="services"
     tagline="Services"
-title="What you get with Company name"
+    title="What you get with Company name"
     subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis vitae molestias maxime recusandae eligendi vero, voluptatem"
     items={[
       {
         title: 'Construction',
         description:
           'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        image:  '~/assets/images/construction.jpg',
+        image: '~/assets/images/construction.jpg',
         href: getPermalink('/services#construction'),
       },
       {
         title: 'Swimming pools',
         description:
           'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        image:  '~/assets/images/pool.jpg',
+        image: '~/assets/images/pool.jpg',
         href: getPermalink('/services#pools'),
       },
       {
         title: 'Refurbishing',
         description:
           'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        image:  '~/assets/images/refurb.jpg',
+        image: '~/assets/images/refurb.jpg',
         href: getPermalink('/services#refurbishing'),
       },
       {
         title: 'Paint jobs',
         description:
           'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        image:  '~/assets/images/paint.jpg',
+        image: '~/assets/images/paint.jpg',
         href: getPermalink('/services#paint'),
       },
       {
         title: 'Insulation',
         description:
           "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        image:  '~/assets/images/insulation.jpg',
+        image: '~/assets/images/insulation.jpg',
         href: getPermalink('/services#insulation'),
       },
       {
         title: 'Something else',
         description:
           'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        image:  '~/assets/images/house3.jpg',
+        image: '~/assets/images/house3.jpg',
         href: getPermalink('/services'),
       },
     ]}
@@ -119,22 +104,19 @@ title="What you get with Company name"
     items={[
       {
         title: 'Some other feature',
-        description:
-          'Benefiting from something or other',
+        description: 'Benefiting from something or other',
       },
       {
         title: 'Great stuff about your brand',
-        description:
-          'blah blah something something nice company',
+        description: 'blah blah something something nice company',
       },
       {
         title: 'Fast and reliable service',
-        description:
-          'A bunch more marketing stuff',
+        description: 'A bunch more marketing stuff',
       },
     ]}
     image={{
-src: '~/assets/images/blueprint.jpg',
+      src: '~/assets/images/blueprint.jpg',
       alt: 'Colorful Image',
     }}
   >
@@ -223,7 +205,6 @@ src: '~/assets/images/blueprint.jpg',
   <!-- Features2 Widget ************** -->
 
   <!-- HighlightedPosts Widget ******* -->
-
 
   <!-- FAQs Widget ******************* -->
 

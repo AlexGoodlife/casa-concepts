@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -8,7 +8,7 @@ export const headerData = {
     },
     {
       text: 'About',
-      links : [
+      links: [
         {
           text: 'About us',
           href: getPermalink('/about'),
@@ -25,12 +25,11 @@ export const headerData = {
           text: 'Privacy policy',
           href: getPermalink('/privacy'),
         },
-
-      ]
+      ],
     },
     {
       text: 'Services',
-      links : [
+      links: [
         {
           text: 'Home',
           href: getPermalink('/services'),
@@ -55,7 +54,7 @@ export const headerData = {
           text: 'Paint jobs',
           href: getPermalink('/services#paint'),
         },
-      ]
+      ],
     },
   ],
   actions: [{ text: 'Contact us', href: getPermalink('/contact'), target: '_blank' }],

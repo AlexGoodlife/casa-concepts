@@ -1,11 +1,11 @@
 ---
-import type { ServiceGrid as Props} from '~/types';
+import type { ServiceGrid as Props } from '~/types';
 import { Icon } from 'astro-icon/components';
 import { twMerge } from 'tailwind-merge';
 import Button from './Button.astro';
 import Image from '../common/Image.astro';
 
-const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
+const { items = [], columns, classes = {} } = Astro.props;
 
 const {
   container: containerClass = '',
@@ -33,31 +33,31 @@ const {
         containerClass
       )}
     >
-  {items.map(({ title, description, image, icon, callToAction, href, classes: itemClasses = {}}) => (
+      {items.map(({ title, description, image, icon, callToAction, href, classes: itemClasses = {} }) => (
         <a
           class={twMerge(
             'relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
             panelClass,
             itemClasses?.panel
-          )} href= {href}  
-        >
-
-          {(icon) && (
-            <Icon name={icon } class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
           )}
-    {(image)  && (  <div class="relative w-full aspect-w-16 aspect-h-9"><Image
-            src={image}
-            class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-            widths={[400, 900]}
-            width={400}
-            sizes="(max-width: 900px) 400px, 900px"
-            alt=""
-            aspectRatio="16:9"
-            layout="responsive"
-            loading="lazy"
-            decoding="async"
-          />
-    </div>
+          href={href}
+        >
+          {icon && <Icon name={icon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />}
+          {image && (
+            <div class="relative w-full aspect-w-16 aspect-h-9">
+              <Image
+                src={image}
+                class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+                widths={[400, 900]}
+                width={400}
+                sizes="(max-width: 900px) 400px, 900px"
+                alt=""
+                aspectRatio="16:9"
+                layout="responsive"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           )}
           <div class={twMerge('text-xl font-bold mt-2', titleClass, itemClasses?.title)}>{title}</div>
           {description && (
@@ -68,7 +68,7 @@ const {
               <Button {...callToAction} />
             </div>
           )}
-  </a>
+        </a>
       ))}
     </div>
   )
