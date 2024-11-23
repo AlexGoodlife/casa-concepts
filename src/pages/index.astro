@@ -14,6 +14,7 @@ const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
 };
+console.log(getPermalink('/services#construction'));
 ---
 
 <Layout metadata={metadata}>
@@ -55,35 +56,35 @@ const metadata = {
         description:
           'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
         image: '~/assets/images/construction.jpg',
-        href: getPermalink('/services#construction'),
+        href: getPermalink('/services') + '#construction',
       },
       {
         title: 'Swimming pools',
         description:
           'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
         image: '~/assets/images/pool.jpg',
-        href: getPermalink('/services#pools'),
+        href: getPermalink('/services') + '#pools',
       },
       {
         title: 'Refurbishing',
         description:
           'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
         image: '~/assets/images/refurb.jpg',
-        href: getPermalink('/services#refurbishing'),
+        href: getPermalink('/services') + '#refurbishing',
       },
       {
         title: 'Paint jobs',
         description:
           'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
         image: '~/assets/images/paint.jpg',
-        href: getPermalink('/services#paint'),
+        href: getPermalink('/services') + '#paint',
       },
       {
         title: 'Insulation',
         description:
           "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
         image: '~/assets/images/insulation.jpg',
-        href: getPermalink('/services#insulation'),
+        href: getPermalink('/services') + '#insulation',
       },
       {
         title: 'Something else',

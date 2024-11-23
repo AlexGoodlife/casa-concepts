@@ -36,23 +36,23 @@ export const headerData = {
         },
         {
           text: 'Construction',
-          href: getPermalink('/services#construction'),
+          href: getPermalink('/services') + '#construction',
         },
         {
           text: 'Swimming pools',
-          href: getPermalink('/services#pools'),
+          href: getPermalink('/services') + '#pools',
         },
         {
           text: 'Refurbishing',
-          href: getPermalink('/services#refurbishing'),
+          href: getPermalink('/services') + '#refurbishing',
         },
         {
           text: 'Insulation',
-          href: getPermalink('/services#insulation'),
+          href: getPermalink('/services') + '#insulation',
         },
         {
           text: 'Paint jobs',
-          href: getPermalink('/services#paint'),
+          href: getPermalink('/services') + '#paint',
         },
       ],
     },
@@ -78,23 +78,23 @@ export const footerData = {
         },
         {
           text: 'Construction',
-          href: getPermalink('/services#construction'),
+          href: getPermalink('/services') + '#construction',
         },
         {
           text: 'Swimming pools',
-          href: getPermalink('/services#pools'),
+          href: getPermalink('/services') + '#pools',
         },
         {
           text: 'Refurbishing',
-          href: getPermalink('/services#refurbishing'),
+          href: getPermalink('/services') + '#refurbishing',
         },
         {
           text: 'Insulation',
-          href: getPermalink('/services#insulation'),
+          href: getPermalink('/services') + '#insulation',
         },
         {
           text: 'Paint jobs',
-          href: getPermalink('/services#paint'),
+          href: getPermalink('/services') + '#paint',
         },
       ],
     },
