@@ -8,53 +8,11 @@ export const headerData = {
     },
     {
       text: 'About',
-      links: [
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
+      href: getPermalink('/about'),
     },
     {
       text: 'Services',
-      links: [
-        {
-          text: 'Home',
-          href: getPermalink('/services'),
-        },
-        {
-          text: 'Construction',
-          href: getPermalink('/services') + '#construction',
-        },
-        {
-          text: 'Swimming pools',
-          href: getPermalink('/services') + '#pools',
-        },
-        {
-          text: 'Refurbishing',
-          href: getPermalink('/services') + '#refurbishing',
-        },
-        {
-          text: 'Insulation',
-          href: getPermalink('/services') + '#insulation',
-        },
-        {
-          text: 'Paint jobs',
-          href: getPermalink('/services') + '#paint',
-        },
-      ],
+      href: getPermalink('/services'),
     },
   ],
   actions: [{ text: 'Contact us', href: getPermalink('/contact'), target: '_blank' }],
@@ -63,7 +21,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Company',
+      title: 'Casa Concepts',
       links: [
         { text: 'About', href: getPermalink('/about') },
         { text: 'Contact', href: getPermalink('/contact') },
@@ -71,6 +29,7 @@ export const footerData = {
     },
     {
       title: 'Services',
+          
       links: [
         {
           text: 'Home',

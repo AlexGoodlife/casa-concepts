@@ -20,10 +20,6 @@ const metadata = {
     title="Get the plan that will turn your visions into a reality"
     subtitle="Make your visions come true with our help!"
     actions={[{ variant: 'primary', text: 'Start exploring', href: getPermalink('#list') }]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
-    }}
   />
 
   <!-- Features2 Widget ************** -->
@@ -39,35 +35,41 @@ const metadata = {
         description:
           'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
         icon: 'tabler:building',
+        href: getPermalink('/services') + '#construction',
       },
       {
         title: 'Swimming pools',
         description:
           'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
         icon: 'tabler:pool',
+        href: getPermalink('/services') + '#pools',
       },
       {
         title: 'Refurbishing',
         description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
         icon: 'tabler:building-cog',
+        href: getPermalink('/services') + '#refurbishing',
       },
       {
         title: 'Insulation',
         description:
           'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
         icon: 'tabler:snowflake-off',
+        href: getPermalink('/services') + '#paint',
       },
       {
         title: 'Paint jobs',
         description:
           'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
         icon: 'tabler:paint',
+        href: getPermalink('/services') + '#insulation',
       },
       {
         title: 'Business',
         description:
           'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
         icon: 'tabler:building-store',
+        href: getPermalink('/services'),
       },
     ]}
   />
@@ -81,22 +83,22 @@ const metadata = {
       {
         title: 'Houses',
         description: 'Build houses and stuff',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'Buildings',
         description: 'Build bigger buildings and stuff',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'Villas',
         description: 'Build villas or something',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'Gyms',
         description: 'Build a really big gym and stuff',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
     ]}
     image={{
@@ -118,17 +120,17 @@ const metadata = {
       {
         title: 'Indoor pools',
         description: 'Pools but indoor',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'Outdoor pools',
         description: 'pools but outdoors',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'Luxury pools',
         description: 'pools but fancy',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
     ]}
     image={{
@@ -149,22 +151,22 @@ const metadata = {
       {
         title: 'Home renovations',
         description: 'Renovations of a home',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'Office renovations',
         description: 'Renovations of an office',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'Exterior and Façade',
         description: 'Exterior renovations',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'Ceiling and floor renovations',
         description: 'Ceiling and floor renovations',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
     ]}
     image={{
@@ -184,17 +186,17 @@ const metadata = {
       {
         title: 'Exterior insulation',
         description: 'Renovations of a home',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'Interior insulation',
         description: 'Renovations of an office',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'On-screen insulation',
         description: 'Exterior renovations',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
     ]}
     image={{
@@ -216,17 +218,17 @@ const metadata = {
       {
         title: 'Exterior paint job',
         description: 'Renovations of a home',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'Interior paint job',
         description: 'Renovations of an office',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
       {
         title: 'Windows and doors',
         description: 'Exterior renovations',
-        icon: 'tabler:circle',
+        icon: 'tabler:checkbox',
       },
     ]}
     image={{
@@ -281,7 +283,7 @@ const metadata = {
       {
         variant: 'secondary',
         text: 'Contact us',
-        href: '/',
+        href: getPermalink('/contact'),
       },
     ]}
     title="Get in contact with us"

@@ -9,6 +9,9 @@
   .bg-dark {
     background-color: var(--aw-color-bg-page-dark);
   }
+  .bg-secondary{
+    background-color: var(--aw-color-bg-secondary);
+  }
   .bg-light {
     background-color: var(--aw-color-bg-page);
   }
@@ -26,7 +29,7 @@
   }
 
   .btn-primary {
-    @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+    @apply btn font-semibold bg-primary text-black border-primary hover:bg-secondary hover:border-secondary hover:text-black dark:text-black dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
   }
 
   .btn-secondary {
@@ -36,6 +39,10 @@
   .btn-tertiary {
     @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
   }
+
+  .service-link {
+    @apply border-none rounded-md transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800 cursor-pointer;
+  }
 }
 
 #header.scroll > div:first-child {
@@ -44,7 +51,7 @@
 }
 .dark #header.scroll > div:first-child,
 #header.scroll.dark > div:first-child {
-  @apply bg-page md:bg-[#030621e6] border-b border-gray-500/20;
+  @apply bg-page md:bg-[var(--aw-color-bg-page)] border-b border-gray-500/20;
   box-shadow: none;
 }
 /* #header.scroll > div:last-child {

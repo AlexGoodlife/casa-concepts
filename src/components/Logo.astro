@@ -1,11 +1,24 @@
 ---
 import { SITE } from 'astrowind:config';
+import Image from './common/Image.astro';
 ---
 
-<div class="flex">
-  <span
-    class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
-  >
-    {SITE?.name}
-  </span>
+<div class="flex items-center space-x-4">
+  <Image
+    src="~/assets/images/logoCropped.jpg"
+    class="max-h-16 object-contain bg-gray-400 dark:bg-slate-700"
+    widths={[100, 200, 400]}
+    width={400}
+    sizes="(max-width: 640px) 100px, (max-width: 768px) 150px, 200px"
+    alt="Logo"
+    aspectRatio="16:9"
+    layout="responsive"
+    loading="lazy"
+    decoding="async"
+  />
+  <!-- <span -->
+  <!--   class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white" -->
+  <!-- > -->
+  <!--   {SITE?.name} -->
+  <!-- </span> -->
 </div>

@@ -11,7 +11,7 @@ import Services from '~/components/widgets/Services.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Casa Concepts —  Property maintence and Renovation',
   ignoreTitleTemplate: true,
 };
 console.log(getPermalink('/services#construction'));
@@ -26,7 +26,7 @@ console.log(getPermalink('/services#construction'));
         href: getPermalink('/contact'),
         target: '_blank',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Learn more', href: getPermalink('/about') },
     ]}
     image={{ src: '~/assets/images/house4.jpg', alt: 'House Hero Image' }}
   >
@@ -37,9 +37,9 @@ console.log(getPermalink('/services#construction'));
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Company name</span> Something something something something something :))).</span
+        <span class="font-semibold">Casa Concepts </span> Something something something something something :))).</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">Company name: slogan.</span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Casa Concepts : slogan.</span>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis
       vitae molestias maxime recusandae eligendi vero, voluptatem ipsam, ex minima assumenda aspernatur voluptatum.
     </Fragment>
@@ -48,7 +48,7 @@ console.log(getPermalink('/services#construction'));
   <Services
     id="services"
     tagline="Services"
-    title="What you get with Company name"
+    title="What you get with Casa Concepts "
     subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis vitae molestias maxime recusandae eligendi vero, voluptatem"
     items={[
       {
@@ -100,8 +100,8 @@ console.log(getPermalink('/services#construction'));
 
   <Content
     isReversed
-    tagline="Advantages"
-    title="Something about your company or other! Should be cool"
+    tagline="Standards"
+    title="Our standards for service and quality" 
     items={[
       {
         title: 'Some other feature',
@@ -115,16 +115,21 @@ console.log(getPermalink('/services#construction'));
         title: 'Fast and reliable service',
         description: 'A bunch more marketing stuff',
       },
+      {
+        title: 'Integration of media',
+        description:
+          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+      },
     ]}
     image={{
       src: '~/assets/images/blueprint.jpg',
       alt: 'Colorful Image',
     }}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built with the best standards</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
+    <!-- <Fragment slot="content"> -->
+    <!--   <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built with the best standards</h3> -->
+    <!--   Gain a competitive advantage by incorporating industry leading practices -->
+    <!-- </Fragment> -->
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -150,11 +155,6 @@ console.log(getPermalink('/services#construction'));
         description:
           "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
       },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
     ]}
     image={{
       src: '~/assets/images/concrete.jpg',
@@ -170,38 +170,38 @@ console.log(getPermalink('/services#construction'));
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
-    isReversed
-    title="Make your visions come true"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Contact us and get a quote</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Make your vision in to a plan</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Something else i dont know build?</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Done!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
+  <!-- <Steps -->
+  <!--   isReversed -->
+  <!--   title="Make your visions come true" -->
+  <!--   items={[ -->
+  <!--     { -->
+  <!--       title: 'Step 1: <span class="font-medium">Contact us and get a quote</span>', -->
+  <!--       description: -->
+  <!--         "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.", -->
+  <!--       icon: 'tabler:package', -->
+  <!--     }, -->
+  <!--     { -->
+  <!--       title: 'Step 2: <span class="font-medium">Make your vision in to a plan</span>', -->
+  <!--       description: -->
+  <!--         "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.", -->
+  <!--       icon: 'tabler:letter-case', -->
+  <!--     }, -->
+  <!--     { -->
+  <!--       title: 'Step 3: <span class="font-medium">Something else i dont know build?</span>', -->
+  <!--       description: -->
+  <!--         'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.', -->
+  <!--       icon: 'tabler:paint', -->
+  <!--     }, -->
+  <!--     { -->
+  <!--       title: 'Done!', -->
+  <!--       icon: 'tabler:check', -->
+  <!--     }, -->
+  <!--   ]} -->
+  <!--   image={{ -->
+  <!--     src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80', -->
+  <!--     alt: 'Steps image', -->
+  <!--   }} -->
+  <!-- /> -->
 
   <!-- Features2 Widget ************** -->
 
@@ -211,12 +211,12 @@ console.log(getPermalink('/services#construction'));
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that Company offers and how it can elevate your web development journey."
+    subtitle="Dive into the following questions to gain insights into the powerful features that Casa Concepts offers and how it can elevate your web development journey."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why Company?',
+        title: 'Why Casa Concepts?',
         description:
           "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
       },
@@ -265,14 +265,14 @@ console.log(getPermalink('/services#construction'));
       {
         variant: 'primary',
         text: 'Get a quote',
-        href: 'https://github.com/onwidget/astrowind',
+        href: getPermalink('/contact'),
         target: '_blank',
         icon: 'tabler:arrow-right',
       },
     ]}
   >
     <Fragment slot="title">
-      <span class="sm:whitespace-nowrap">Company name</span>
+      <span class="sm:whitespace-nowrap">Casa Concepts </span>
     </Fragment>
 
     <Fragment slot="subtitle">
