@@ -28,20 +28,20 @@ import '@fontsource-variable/inter';
     /* Updated color palette */
     --aw-color-primary: rgb(255, 197, 12); /* #FFC50C */
     --aw-color-secondary: rgb(12, 7, 13);  /* #0C070D */
-    --aw-color-accent: rgb(118, 118, 120); /* #767678 */
-
-    --aw-color-bg-page: rgb(255, 255, 255); /* White background */
-    --aw-color-bg-secondary: rgb(246, 246, 246); /* Subtle light gray for sections */
+    --aw-color-accent: rgb(70, 70, 95); /* #767678 */
 
     --aw-color-text-heading: rgb(12, 7, 13); /* Dark for headings */
     --aw-color-text-default: rgb(35, 35, 35); /* Slightly lighter default text */
     --aw-color-text-muted: rgb(35, 35, 35 / 66%); /* Muted text with transparency */
+    --aw-color-bg-page: rgb(255, 255, 255); /* White background */
+    --aw-color-bg-muted: rgb(246, 246, 246); /* Subtle light gray for muted elements */
 
-    /* Button colors */
-    --aw-button-bg: rgb(255, 197, 12); /* Primary yellow */
-    --aw-button-text: rgb(12, 7, 13); /* Dark text on yellow */
-    --aw-button-hover-bg: rgb(229, 177, 11); /* Slightly darker yellow for hover */
-    --aw-button-hover-text: rgb(12, 7, 13); /* Consistent button text on hover */
+    /* Dark mode */
+    --aw-color-bg-page-dark: rgb(12, 7, 13); /* Matches secondary */
+    --aw-color-text-heading-dark: rgb(255, 255, 255); /* White for contrast */
+    --aw-color-text-default-dark: rgb(200, 200, 200);
+    --aw-color-text-muted-dark: rgb(200, 200, 200 / 66%);
+    --aw-color-accent-dark: rgb(255, 197, 12); /* Accent stays bright for dark mode */
 
     ::selection {
       background-color: rgb(255, 197, 12); /* Highlight matches primary */
@@ -59,22 +59,9 @@ import '@fontsource-variable/inter';
     --aw-color-secondary: rgb(12, 7, 13);
     --aw-color-accent: rgb(118, 118, 120);
 
-    --aw-color-bg-page: rgb(12, 7, 13); /* Matches secondary */
-    --aw-color-bg-secondary: rgb(30, 30, 30); /* Subtle dark gray for sections */
-
-    --aw-color-text-heading: rgb(255, 255, 255); /* White text for dark mode */
+    --aw-color-text-heading: rgb(255, 255, 255);
     --aw-color-text-default: rgb(200, 200, 200);
     --aw-color-text-muted: rgb(200, 200, 200 / 66%);
-
-    /* Button colors */
-    --aw-button-bg: rgb(255, 197, 12); /* Primary yellow */
-    --aw-button-text: rgb(12, 7, 13); /* Dark text on yellow */
-    --aw-button-hover-bg: rgb(229, 177, 11); /* Slightly darker yellow for hover */
-    --aw-button-hover-text: rgb(12, 7, 13); /* Consistent button text on hover */
-
-    ::selection {
-      background-color: rgb(255, 197, 12); /* Highlight matches primary */
-      color: rgb(12, 7, 13); /* High contrast selection */
-    }
+    --aw-color-bg-page: rgb(12, 7, 13);
   }
 </style>

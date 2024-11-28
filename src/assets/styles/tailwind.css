@@ -18,6 +18,12 @@
   .text-page {
     color: var(--aw-color-text-page);
   }
+  .text-accented {
+    color: var(--aw-color-accent);
+  }
+  .text-heading {
+    color: var(--aw-color-text-heading);
+  }
   .text-muted {
     color: var(--aw-color-text-muted);
   }

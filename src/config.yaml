@@ -1,5 +1,5 @@
 site:
-  name: Company
+  name: Casa Concepts
   site: 'https://alexgoodlife.github.io'
   base: '/site-ricardo'
   trailingSlash: true
@@ -9,16 +9,16 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Company
-    template: '%s — Company'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Casa Concepts
+    template: '%s — Casa Concepts'
+  description: "\U0001F680 Property maintenance & Renovation."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Company
+    site_name: Casa Concepts
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/logo.jpg'
         width: 1200
         height: 628
     type: website

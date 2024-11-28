@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -18,7 +19,7 @@ console.log(getPermalink('/services#construction'));
 ---
 
 <Layout metadata={metadata}>
-  <Hero2
+  <Hero
     actions={[
       {
         variant: 'primary',
@@ -28,22 +29,22 @@ console.log(getPermalink('/services#construction'));
       },
       { text: 'Learn more', href: getPermalink('/about') },
     ]}
-    image={{ src: '~/assets/images/house4.jpg', alt: 'House Hero Image' }}
+    image={{ src: '~/assets/images/hero_main.jpg', alt: 'House Hero Image' , layout: "cover"}}
   >
     <Fragment slot="title">
-      Build stuff I think <span class="hidden xl:inline">from kitchens to whatever</span>
-      <span class="text-accent dark:text-white highlight"> at your disposal </span>
+      <span class = "text-heading">Building dreams </span>
+      <span class="text-accented dark:text-white highlight"> one step at a time </span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">Casa Concepts </span> Something something something something something :))).</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">Casa Concepts : slogan.</span>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis
-      vitae molestias maxime recusandae eligendi vero, voluptatem ipsam, ex minima assumenda aspernatur voluptatum.
+      <!-- <span class="hidden sm:inline"> -->
+      <!--   <span class="font-semibold">Casa Concepts </span> Something something something something something :))).</span -->
+      <!-- > -->
+      <!-- <span class="block mb-1 sm:hidden font-bold text-blue-600">Casa Concepts : slogan.</span> -->
+      <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis -->
+      <!-- vitae molestias maxime recusandae eligendi vero, voluptatem ipsam, ex minima assumenda aspernatur voluptatum. -->
     </Fragment>
-  </Hero2>
+  </Hero>
 
   <Services
     id="services"
@@ -254,7 +255,7 @@ console.log(getPermalink('/services#construction'));
     stats={[
       { title: 'Clients', amount: '132' },
       { title: 'Projects', amount: '24' },
-      { title: 'Employees', amount: '48' },
+      { title: 'Years of Experience', amount: '37' },
     ]}
   />
 
