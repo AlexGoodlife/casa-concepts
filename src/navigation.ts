@@ -52,7 +52,7 @@ export const footerData = {
           href: getPermalink('/services') + '#insulation',
         },
         {
-          text: 'Paint jobs',
+          text: 'Painting',
           href: getPermalink('/services') + '#paint',
         },
       ],
