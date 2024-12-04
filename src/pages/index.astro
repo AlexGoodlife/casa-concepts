@@ -36,61 +36,61 @@ console.log(getPermalink('/services#construction'));
       <span class="text-accented dark:text-white highlight"> one step at a time </span>
     </Fragment>
 
-    <Fragment slot="subtitle">
+    <!-- <Fragment slot="subtitle"> -->
       <!-- <span class="hidden sm:inline"> -->
       <!--   <span class="font-semibold">Casa Concepts </span> Something something something something something :))).</span -->
       <!-- > -->
       <!-- <span class="block mb-1 sm:hidden font-bold text-blue-600">Casa Concepts : slogan.</span> -->
       <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis -->
       <!-- vitae molestias maxime recusandae eligendi vero, voluptatem ipsam, ex minima assumenda aspernatur voluptatum. -->
-    </Fragment>
+    <!-- </Fragment> -->
   </Hero>
 
   <Services
     id="services"
     tagline="Services"
-    title="What you get with Casa Concepts "
-    subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis vitae molestias maxime recusandae eligendi vero, voluptatem"
+    title="What we can help you with"
+    subtitle="At Casa Concepts, we are dedicated to remodelling and redesigning interiors, creating unique environments that reflect the personality and needs of our clients."
     items={[
       {
         title: 'Construction',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'We offer bespoke construction services, turning ideas into reality. From planning to final delivery, we ensure high-quality execution with attention to detail and adherence to deadlines. Whether it’s a new build or an extension, we create spaces that combine functionality and design.',
         image: '~/assets/images/construction.jpg',
         href: getPermalink('/services') + '#construction',
       },
       {
         title: 'Swimming pools',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'Add a special touch to your property with our pool construction and renovation solutions. We design pools that combine style, durability, and efficiency, tailored to each client’s needs. From modern structures to classic designs, we guarantee a stunning oasis in your backyard',
         image: '~/assets/images/pool.jpg',
         href: getPermalink('/services') + '#pools',
       },
       {
         title: 'Refurbishing',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+          'Transform your space with our refurbishment services. At Casa Concepts, we revitalise interiors and exteriors, preserving the essence of your property while adding modernity and functionality. Each project is handled with the utmost attention to exceed expectations',
         image: '~/assets/images/refurb.jpg',
         href: getPermalink('/services') + '#refurbishing',
       },
       {
         title: 'Painting',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'We enhance the beauty of your spaces with professional painting services. Using high-quality materials and precise application techniques, we deliver flawless finishes, whether for interiors or exteriors. Add colour and life to your project with Casa Concepts.',
         image: '~/assets/images/paint.jpg',
         href: getPermalink('/services') + '#paint',
       },
       {
         title: 'Insulation',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+          "Improve the comfort and energy efficiency of your home with our insulation solutions. We offer innovative methods to reduce energy loss, ensure optimal temperatures, and lower heating and cooling costs. A smart and sustainable investment for the future.",
         image: '~/assets/images/insulation.jpg',
         href: getPermalink('/services') + '#insulation',
       },
       {
-        title: 'Something else',
+        title: 'New Projects, New Dreams',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+          'Each project is an opportunity to create something unique and special. At Casa Concepts, we believe every build is more than just construction – it’s the realisation of dreams. Whether it’s a renovation, a pool, or a new build, we work to bring your ideas to life with dedication, quality, and innovation. Let’s build your new dreams together!',
         image: '~/assets/images/house3.jpg',
         href: getPermalink('/services'),
       },
@@ -105,21 +105,16 @@ console.log(getPermalink('/services#construction'));
     title="Our standards for service and quality" 
     items={[
       {
-        title: 'Some other feature',
-        description: 'Benefiting from something or other',
+        title: 'Clear and Organised Planning',
+        description: 'Organisation is essential to avoid delays and surprises.',
       },
       {
-        title: 'Great stuff about your brand',
-        description: 'blah blah something something nice company',
+        title: 'Compliance with Laws and Regulations',
+        description: 'Enjoy the peace of mind knowing your project is 100% compliant.',
       },
       {
-        title: 'Fast and reliable service',
-        description: 'A bunch more marketing stuff',
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+        title: 'Sustainable and Economical Solutions',
+        description: 'Modern, eco-friendly solutions that make all the difference.',
       },
     ]}
     image={{
@@ -143,18 +138,18 @@ console.log(getPermalink('/services#construction'));
     isAfterContent
     items={[
       {
-        title: 'High level of customization',
+        title: 'Transparency and Constant Communication',
+        description:
+          'We are always available to address queries, from the simplest to the most important decisions.',
+      },
+      {
+        title: 'Personalisation and Flexibility',
         description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
       },
       {
-        title: 'Multiple layout possibilities',
+        title: 'Commitment to Safety',
         description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+          'Confidence that the team is protected and the project environment is safe for everyone',
       },
     ]}
     image={{
@@ -162,51 +157,13 @@ console.log(getPermalink('/services#construction'));
       alt: 'Blueprint Image',
     }}
   >
-    <Fragment slot="content">Some more stuff about your product</Fragment>
+    <Fragment slot="content">We also guarantee</Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
-
-  <!-- <Steps -->
-  <!--   isReversed -->
-  <!--   title="Make your visions come true" -->
-  <!--   items={[ -->
-  <!--     { -->
-  <!--       title: 'Step 1: <span class="font-medium">Contact us and get a quote</span>', -->
-  <!--       description: -->
-  <!--         "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.", -->
-  <!--       icon: 'tabler:package', -->
-  <!--     }, -->
-  <!--     { -->
-  <!--       title: 'Step 2: <span class="font-medium">Make your vision in to a plan</span>', -->
-  <!--       description: -->
-  <!--         "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.", -->
-  <!--       icon: 'tabler:letter-case', -->
-  <!--     }, -->
-  <!--     { -->
-  <!--       title: 'Step 3: <span class="font-medium">Something else i dont know build?</span>', -->
-  <!--       description: -->
-  <!--         'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.', -->
-  <!--       icon: 'tabler:paint', -->
-  <!--     }, -->
-  <!--     { -->
-  <!--       title: 'Done!', -->
-  <!--       icon: 'tabler:check', -->
-  <!--     }, -->
-  <!--   ]} -->
-  <!--   image={{ -->
-  <!--     src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80', -->
-  <!--     alt: 'Steps image', -->
-  <!--   }} -->
-  <!-- /> -->
-
-  <!-- Features2 Widget ************** -->
-
-  <!-- HighlightedPosts Widget ******* -->
 
   <!-- FAQs Widget ******************* -->
 
@@ -217,34 +174,34 @@ console.log(getPermalink('/services#construction'));
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why Casa Concepts?',
+        title: 'What is the estimated cost of my project?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "The cost depends on various factors, such as the size of the project, chosen materials, level of customisation, and technical requirements. After an initial and detailed analysis of your needs, we will provide a clear and transparent quote with no surprises.",
       },
       {
-        title: 'What do I need to start?',
+        title: 'What is the timeframe for completing the project?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'The timeframe varies depending on the complexity and scale of the project. During the initial planning stage, we establish a detailed schedule outlining all stages of the build, keeping you updated throughout to ensure you are always informed.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'What are the steps involved in the construction process?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+        "The process typically includes: Planning and permits, Architectural and technical design, Land preparation and foundations, Structural construction, Interior and exterior finishes, Final inspection and delivery.",
       },
       {
-        title: "What's something that you don't understand?",
+        title: "Does the company have the required licences and certifications?",
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          "Yes, we are a fully licensed and certified company capable of executing construction projects. We also adhere to all safety standards and local regulations to ensure your project is legally compliant.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'How is communication managed during the project?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          "We maintain constant communication with our clients through regular meetings, progress reports, and updates via email or phone. We are always available to address any concerns or accommodate new requests.",
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'What guarantees are offered after the project is completed?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          "We provide guarantees on the quality of materials and workmanship, in accordance with legal standards. If any issues arise after completion, our team will be available to carry out necessary repairs or adjustments within the warranty period.",
       },
     ]}
   />
@@ -277,8 +234,7 @@ console.log(getPermalink('/services#construction'));
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Building dreams one step at a time
     </Fragment>
   </CallToAction>
 </Layout>

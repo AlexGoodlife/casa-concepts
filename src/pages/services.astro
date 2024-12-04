@@ -27,50 +27,50 @@ const metadata = {
   <Service
     id="list"
     title="Explore our diverse services"
-    subtitle="Discover our selection below to streamline and elevate your projects."
-    columns={3}
+    subtitle="Discover our selection below"
+    columns={2}
     items={[
       {
         title: 'Construction',
         description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
+        'We offer bespoke construction services, turning ideas into reality, from planning to final delivery.',
         icon: 'tabler:building',
         href: getPermalink('/services') + '#construction',
       },
       {
         title: 'Swimming pools',
         description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
+          'Add a special touch to your property with our pool construction and renovation solutions.',
         icon: 'tabler:pool',
         href: getPermalink('/services') + '#pools',
       },
       {
         title: 'Refurbishing',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
+        description: 'Transform your space with our refurbishment services.',
         icon: 'tabler:building-cog',
         href: getPermalink('/services') + '#refurbishing',
       },
       {
         title: 'Insulation',
         description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
+          'Improve the comfort and energy efficiency of your home with our insulation solutions.',
         icon: 'tabler:snowflake-off',
         href: getPermalink('/services') + '#paint',
       },
       {
         title: 'Painting',
         description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
+          'We enhance the beauty of your spaces with professional painting services.',
         icon: 'tabler:paint',
         href: getPermalink('/services') + '#insulation',
       },
-      {
-        title: 'Business',
-        description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
-        href: getPermalink('/services'),
-      },
+      // {
+      //   title: 'Business',
+      //   description:
+      //     'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
+      //   icon: 'tabler:building-store',
+      //   href: getPermalink('/services'),
+      // },
     ]}
   />
 
@@ -82,22 +82,18 @@ const metadata = {
     items={[
       {
         title: 'Houses',
-        description: 'Build houses and stuff',
         icon: 'tabler:checkbox',
       },
       {
         title: 'Buildings',
-        description: 'Build bigger buildings and stuff',
         icon: 'tabler:checkbox',
       },
       {
         title: 'Villas',
-        description: 'Build villas or something',
         icon: 'tabler:checkbox',
       },
       {
         title: 'Gyms',
-        description: 'Build a really big gym and stuff',
         icon: 'tabler:checkbox',
       },
     ]}
@@ -108,6 +104,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Construction</h3>
+We offer bespoke construction services, turning ideas into reality. From planning to final delivery, we ensure high-quality execution with attention to detail and adherence to deadlines. Whether it’s a new build or an extension, we create spaces that combine functionality and design.
     </Fragment>
   </Content>
 
@@ -119,17 +116,14 @@ const metadata = {
     items={[
       {
         title: 'Indoor pools',
-        description: 'Pools but indoor',
         icon: 'tabler:checkbox',
       },
       {
         title: 'Outdoor pools',
-        description: 'pools but outdoors',
         icon: 'tabler:checkbox',
       },
       {
         title: 'Luxury pools',
-        description: 'pools but fancy',
         icon: 'tabler:checkbox',
       },
     ]}
@@ -140,6 +134,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Swimming pools</h3>
+Add a special touch to your property with our pool construction and renovation solutions. We design pools that combine style, durability, and efficiency, tailored to each client’s needs. From modern structures to classic designs, we guarantee a stunning oasis in your backyard
     </Fragment>
   </Content>
 
@@ -150,22 +145,18 @@ const metadata = {
     items={[
       {
         title: 'Home renovations',
-        description: 'Renovations of a home',
         icon: 'tabler:checkbox',
       },
       {
         title: 'Office renovations',
-        description: 'Renovations of an office',
         icon: 'tabler:checkbox',
       },
       {
         title: 'Exterior and Façade',
-        description: 'Exterior renovations',
         icon: 'tabler:checkbox',
       },
       {
         title: 'Ceiling and floor renovations',
-        description: 'Ceiling and floor renovations',
         icon: 'tabler:checkbox',
       },
     ]}
@@ -176,6 +167,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Refurbishing</h3>
+Transform your space with our refurbishment services. At Casa Concepts, we revitalise interiors and exteriors, preserving the essence of your property while adding modernity and functionality. Each project is handled with the utmost attention to exceed expectations
     </Fragment>
   </Content>
 
@@ -185,17 +177,14 @@ const metadata = {
     items={[
       {
         title: 'Exterior insulation',
-        description: 'Renovations of a home',
         icon: 'tabler:checkbox',
       },
       {
         title: 'Interior insulation',
-        description: 'Renovations of an office',
         icon: 'tabler:checkbox',
       },
       {
         title: 'On-screen insulation',
-        description: 'Exterior renovations',
         icon: 'tabler:checkbox',
       },
     ]}
@@ -206,6 +195,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Insulation</h3>
+Improve the comfort and energy efficiency of your home with our insulation solutions. We offer innovative methods to reduce energy loss, ensure optimal temperatures, and lower heating and cooling costs. A smart and sustainable investment for the future.
     </Fragment>
   </Content>
   <!-- Testimonials Widget *********** -->
@@ -217,17 +207,14 @@ const metadata = {
     items={[
       {
         title: 'Exterior paint job',
-        description: 'Renovations of a home',
         icon: 'tabler:checkbox',
       },
       {
         title: 'Interior paint job',
-        description: 'Renovations of an office',
         icon: 'tabler:checkbox',
       },
       {
         title: 'Windows and doors',
-        description: 'Exterior renovations',
         icon: 'tabler:checkbox',
       },
     ]}
@@ -238,6 +225,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Painting</h3>
+We enhance the beauty of your spaces with professional painting services. Using high-quality materials and precise application techniques, we deliver flawless finishes, whether for interiors or exteriors. Add colour and life to your project with Casa Concepts.
     </Fragment>
   </Content>
   <Testimonials
