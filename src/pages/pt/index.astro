@@ -1,0 +1,218 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Services from '~/components/widgets/Services.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Casa Concepts —  Property maintenance & Renovation',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Peça um orçamento',
+        href: getPermalink('/contact'),
+        target: '_blank',
+      },
+      { text: 'Saiba mais', href: getPermalink('/about') },
+    ]}
+    image={{ src: '~/assets/images/hero_main.jpg', alt: 'House Hero Image' , layout: "cover"}}
+  >
+    <Fragment slot="title">
+      <span class = "text-heading">Construindo sonhos</span>
+      <span class="text-accented dark:text-white highlight"> um passo de cada vez </span>
+    </Fragment>
+
+  </Hero>
+
+  <Services
+    id="services"
+    tagline="Serviços"
+    title="O que nós ofereçemos"
+    subtitle="Na Casa Concepts, dedicamo-nos à remodelação e redesign de interiores, criando ambientes únicos que refletem a personalidade e as necessidades dos nossos clientes."
+    items={[
+      {
+        title: 'Construction',
+        description:
+          'Oferecemos serviços de construção personalizados, transformando ideias em realidade. Desde o planeamento até à entrega final, garantimos uma execução de alta qualidade, com atenção ao detalhe e cumprimento de prazos. Quer se trate de uma nova construção ou de uma ampliação, criamos espaços que combinam funcionalidade e design.',
+        image: '~/assets/images/construction.jpg',
+        href: getPermalink('/services') + '#construction',
+      },
+      {
+        title: 'Swimming pools',
+        description:
+          'Dê um toque especial à sua propriedade com as nossas soluções de construção e renovação de piscinas. Projetamos piscinas que combinam estilo, durabilidade e eficiência, adaptadas às necessidades de cada cliente. Desde estruturas modernas a designs clássicos, garantimos um oásis deslumbrante no seu jardim.',
+        image: '~/assets/images/pool.jpg',
+        href: getPermalink('/services') + '#pools',
+      },
+      {
+        title: 'Refurbishing',
+        description:
+          'Transforme o seu espaço com os nossos serviços de renovação. Na Casa Concepts, revitalizamos interiores e exteriores, preservando a essência da sua propriedade enquanto adicionamos modernidade e funcionalidade. Cada projeto é realizado com a máxima atenção para superar as expectativas.',
+        image: '~/assets/images/refurb.jpg',
+        href: getPermalink('/services') + '#refurbishing',
+      },
+      {
+        title: 'Painting',
+        description:
+          'Realçamos a beleza dos seus espaços com serviços profissionais de pintura. Utilizando materiais de alta qualidade e técnicas de aplicação precisas, garantimos acabamentos impecáveis, seja em interiores ou exteriores. Adicione cor e vida ao seu projeto com a Casa Concepts.',
+        image: '~/assets/images/paint.jpg',
+        href: getPermalink('/services') + '#paint',
+      },
+      {
+        title: 'Insulation',
+        description:
+          "Melhore o conforto e a eficiência energética da sua casa com as nossas soluções de isolamento. Oferecemos métodos inovadores para reduzir perdas de energia, garantir temperaturas ideais e baixar os custos de aquecimento e arrefecimento. Um investimento inteligente e sustentável para o futuro.",
+        image: '~/assets/images/insulation.jpg',
+        href: getPermalink('/services') + '#insulation',
+      },
+      {
+        title: 'New Projects, New Dreams',
+        description:
+          'Cada projeto é uma oportunidade de criar algo único e especial. Na Casa Concepts, acreditamos que cada construção é mais do que apenas uma obra – é a concretização de sonhos. Seja uma renovação, uma piscina ou uma nova construção, trabalhamos para dar vida às suas ideias com dedicação, qualidade e inovação. Vamos construir juntos os seus novos sonhos!',
+        image: '~/assets/images/house3.jpg',
+        href: getPermalink('/services'),
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+<Content
+  isReversed
+  tagline="Padrões"
+  title="Os nossos padrões de serviço e qualidade" 
+  items={[
+    {
+      title: 'Planeamento claro e organizado',
+      description: 'A organização é essencial para evitar atrasos e surpresas.',
+    },
+    {
+      title: 'Conformidade com Leis e Regulamentos',
+      description: 'Desfrute da tranquilidade de saber que o seu projeto está 100% em conformidade.',
+    },
+    {
+      title: 'Soluções Sustentáveis e Económicas',
+      description: 'Soluções modernas e ecológicas que fazem toda a diferença.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/blueprint.jpg',
+    alt: 'Imagem colorida',
+  }}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+<Content
+  isAfterContent
+  items={[
+    {
+      title: 'Transparência e Comunicação Constante',
+      description:
+        'Estamos sempre disponíveis para esclarecer dúvidas, desde as mais simples até às decisões mais importantes.',
+    },
+    {
+      title: 'Personalização e Flexibilidade',
+      description: 'Adapte facilmente o modelo à identidade e requisitos da sua marca, tornando o seu website distinto e economizando tempo.',
+    },
+    {
+      title: 'Compromisso com a Segurança',
+      description: 'Confiança de que a equipa está protegida e o ambiente do projeto é seguro para todos.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/concrete.jpg',
+    alt: 'Imagem de projeto',
+  }}
+>
+  <Fragment slot="content">Garantimos também</Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+<FAQs
+  title="Perguntas Frequentes"
+  subtitle="Explore as perguntas abaixo para descobrir as poderosas funcionalidades que a Casa Concepts oferece e como podem elevar o seu projeto."
+  tagline="FAQs"
+  classes={{ container: 'max-w-6xl' }}
+  items={[
+    {
+      title: 'Qual é o custo estimado do meu projeto?',
+      description:
+        'O custo depende de vários fatores, como o tamanho do projeto, materiais escolhidos, nível de personalização e requisitos técnicos. Após uma análise inicial detalhada das suas necessidades, forneceremos um orçamento claro e transparente, sem surpresas.',
+    },
+    {
+      title: 'Qual é o prazo de conclusão do projeto?',
+      description:
+        'O prazo varia de acordo com a complexidade e a escala do projeto. Durante a fase de planeamento inicial, estabelecemos um cronograma detalhado que abrange todas as etapas da construção, mantendo-o sempre informado.',
+    },
+    {
+      title: 'Quais são as etapas envolvidas no processo de construção?',
+      description:
+        'O processo inclui, geralmente: Planeamento e licenças, Design arquitetónico e técnico, Preparação do terreno e fundações, Construção estrutural, Acabamentos interiores e exteriores, Inspeção final e entrega.',
+    },
+    {
+      title: 'A empresa possui as licenças e certificações necessárias?',
+      description:
+        'Sim, somos uma empresa totalmente licenciada e certificada para executar projetos de construção. Também seguimos todas as normas de segurança e regulamentos locais para garantir que o seu projeto está em conformidade com a lei.',
+    },
+    {
+      title: 'Como é gerida a comunicação durante o projeto?',
+      description:
+        'Mantemos uma comunicação constante com os nossos clientes através de reuniões regulares, relatórios de progresso e atualizações por e-mail ou telefone. Estamos sempre disponíveis para esclarecer dúvidas ou acomodar novos pedidos.',
+    },
+    {
+      title: 'Que garantias são oferecidas após a conclusão do projeto?',
+      description:
+        'Oferecemos garantias sobre a qualidade dos materiais e da mão-de-obra, de acordo com as normas legais. Se surgirem problemas após a conclusão, a nossa equipa estará disponível para realizar os reparos ou ajustes necessários dentro do período de garantia.',
+    },
+  ]}
+/>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Clientes', amount: '700' },
+      { title: 'Projectos', amount: '1000' },
+      { title: 'Anos de experiência', amount: '37' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Peça um orçamento',
+        href: getPermalink('/contact'),
+        target: '_blank',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="sm:whitespace-nowrap">Casa Concepts </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Construindo sonhos, um passo de cada vez
+    </Fragment>
+  </CallToAction>
+</Layout>

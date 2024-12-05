@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
 import { getHomePermalink } from '~/utils/permalinks';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils.ts';
 
 interface Link {
   text?: string;
@@ -24,6 +25,10 @@ export interface Props {
 }
 
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
@@ -44,7 +49,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
                 <a
                   class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
                   href={href}
-                  set:html={text}
+                  set:html={t(text)}
                 />
               </>
             ))
@@ -54,7 +59,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
       {
         links.map(({ title, links }) => (
           <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
+            <div class="dark:text-gray-300 font-medium mb-2">{t(title)}</div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
                 {links.map(({ text, href, ariaLabel }) => (
@@ -64,7 +69,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
                       href={href}
                       aria-label={ariaLabel}
                     >
-                      <Fragment set:html={text} />
+                      <Fragment set:html={t(text)} />
                     </a>
                   </li>
                 ))}
@@ -86,7 +91,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
                   href={href}
                 >
                   {icon && <Icon name={icon} class="w-5 h-5" />}
-                  <Fragment set:html={text} />
+                  <Fragment set:html={t(text)} />
                 </a>
               </li>
             ))}

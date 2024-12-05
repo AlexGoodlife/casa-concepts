@@ -1,21 +1,22 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero2 from '~/components/widgets/Hero2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Services from '~/components/widgets/Services.astro';
 import { getPermalink } from '~/utils/permalinks';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils.ts';
+
+let lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 
 const metadata = {
   title: 'Casa Concepts —  Property maintenance & Renovation',
   ignoreTitleTemplate: true,
 };
-console.log(getPermalink('/services#construction'));
 ---
 
 <Layout metadata={metadata}>
@@ -64,7 +65,7 @@ console.log(getPermalink('/services#construction'));
         description:
           'Add a special touch to your property with our pool construction and renovation solutions. We design pools that combine style, durability, and efficiency, tailored to each client’s needs. From modern structures to classic designs, we guarantee a stunning oasis in your backyard',
         image: '~/assets/images/pool.jpg',
-        href: getPermalink('/services') + '#pools',
+        href: getPermalink('/services' + '#pools'),
       },
       {
         title: 'Refurbishing',
@@ -210,8 +211,8 @@ console.log(getPermalink('/services#construction'));
 
   <Stats
     stats={[
-      { title: 'Clients', amount: '132' },
-      { title: 'Projects', amount: '24' },
+      { title: 'Clients', amount: '700' },
+      { title: 'Projects', amount: '1000' },
       { title: 'Years of Experience', amount: '37' },
     ]}
   />

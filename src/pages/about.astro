@@ -3,6 +3,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'About us',
@@ -49,7 +50,7 @@ At Casa Concepts, every project is a testament to our commitment to excellence. 
       {
         variant: 'primary',
         text: 'Get a quote',
-        href: 'https://github.com/onwidget/astrowind',
+        href: getPermalink('/contact'),
         target: '_blank',
         icon: 'tabler:arrow-right',
       },

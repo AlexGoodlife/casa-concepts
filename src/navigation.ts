@@ -1,21 +1,22 @@
 import { getPermalink } from './utils/permalinks';
 
+
 export const headerData = {
   links: [
     {
-      text: 'Home',
+      text: 'nav.home',
       href: getPermalink('/'),
     },
     {
-      text: 'About',
+      text: 'nav.about',
       href: getPermalink('/about'),
     },
     {
-      text: 'Services',
+      text: 'nav.services',
       href: getPermalink('/services'),
     },
   ],
-  actions: [{ text: 'Contact us', href: getPermalink('/contact'), target: '_blank' }],
+  actions: [{ text: 'nav.contact', href: getPermalink('/contact'), target: '_blank' }],
 };
 
 export const footerData = {
@@ -23,36 +24,36 @@ export const footerData = {
     {
       title: 'Casa Concepts',
       links: [
-        { text: 'About', href: getPermalink('/about') },
-        { text: 'Contact', href: getPermalink('/contact') },
+        { text: 'nav.about', href: getPermalink('/about') },
+        { text: 'nav.contact', href: getPermalink('/contact') },
       ],
     },
     {
-      title: 'Services',
+      title: 'nav.services',
           
       links: [
         {
-          text: 'Home',
+          text: 'nav.home',
           href: getPermalink('/services'),
         },
         {
-          text: 'Construction',
+          text: 'nav.construction',
           href: getPermalink('/services') + '#construction',
         },
         {
-          text: 'Swimming pools',
+          text: 'nav.pools',
           href: getPermalink('/services') + '#pools',
         },
         {
-          text: 'Refurbishing',
+          text: 'nav.refurb',
           href: getPermalink('/services') + '#refurbishing',
         },
         {
-          text: 'Insulation',
+          text: 'nav.insulation',
           href: getPermalink('/services') + '#insulation',
         },
         {
-          text: 'Painting',
+          text: 'nav.painting',
           href: getPermalink('/services') + '#paint',
         },
       ],

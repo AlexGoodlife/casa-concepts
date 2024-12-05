@@ -9,12 +9,16 @@ const { items = [], columns, classes = {} } = Astro.props;
 
 const {
   container: containerClass = '',
-  // container: containerClass = "sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
   panel: panelClass = '',
   title: titleClass = '',
   description: descriptionClass = '',
   icon: defaultIconClass = 'text-primary',
 } = classes;
+
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils.ts';
+
+let lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 ---
 
 {
@@ -40,7 +44,7 @@ const {
             panelClass,
             itemClasses?.panel
           )}
-          href={href}
+          href={translatePath(href)}
         >
           {icon && <Icon name={icon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />}
           {image && (

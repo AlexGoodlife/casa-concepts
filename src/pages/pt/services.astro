@@ -1,0 +1,272 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Service from '~/components/widgets/Services.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Services',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Serviços"
+    title="Tenha o plano que transformará as suas visões em realidade"
+    subtitle="Concretize as suas visões com a nossa ajuda!"
+    actions={[{ variant: 'primary', text: 'Comece a explorar', href: getPermalink('/services') + '#list' }]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Service
+    id="list"
+    title="Explore os nossos serviços diversificados"
+    subtitle="Descubra a nossa seleção abaixo"
+    columns={2}
+    items={[
+      {
+        title: 'Construção',
+        description:
+          'Oferecemos serviços de construção personalizados, transformando ideias em realidade, desde o planeamento até à entrega final.',
+        icon: 'tabler:building',
+        href: getPermalink('/services') + '#construction',
+      },
+      {
+        title: 'Piscinas',
+        description:
+          'Adicione um toque especial à sua propriedade com as nossas soluções de construção e renovação de piscinas.',
+        icon: 'tabler:pool',
+        href: getPermalink('/services') + '#pools',
+      },
+      {
+        title: 'Renovações',
+        description: 'Transforme o seu espaço com os nossos serviços de renovação.',
+        icon: 'tabler:building-cog',
+        href: getPermalink('/services') + '#refurbishing',
+      },
+      {
+        title: 'Isolamento',
+        description:
+          'Melhore o conforto e a eficiência energética da sua casa com as nossas soluções de isolamento.',
+        icon: 'tabler:snowflake-off',
+        href: getPermalink('/services') + '#insulation',
+      },
+      {
+        title: 'Pintura',
+        description:
+          'Realçamos a beleza dos seus espaços com serviços profissionais de pintura.',
+        icon: 'tabler:paint',
+        href: getPermalink('/services') + '#paint',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    id="construction"
+    items={[
+      {
+        title: 'Moradias',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Edifícios',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Vivendas',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Ginásios',
+        icon: 'tabler:checkbox',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/construction.jpg',
+      alt: 'Imagem de Construção',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Construção</h3>
+      Oferecemos serviços de construção personalizados, transformando ideias em realidade. Desde o planeamento até à entrega final, garantimos uma execução de alta qualidade com atenção ao detalhe e cumprimento de prazos. Seja uma construção nova ou uma ampliação, criamos espaços que combinam funcionalidade e design.
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    id="pools"
+    items={[
+      {
+        title: 'Piscinas interiores',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Piscinas exteriores',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Piscinas de luxo',
+        icon: 'tabler:checkbox',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/pool.jpg',
+      alt: 'Imagem de Piscinas',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Piscinas</h3>
+      Adicione um toque especial à sua propriedade com as nossas soluções de construção e renovação de piscinas. Projetamos piscinas que combinam estilo, durabilidade e eficiência, adaptadas às necessidades de cada cliente. Desde estruturas modernas a designs clássicos, garantimos um oásis deslumbrante no seu quintal.
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    isReversed
+    id="refurbishing"
+    items={[
+      {
+        title: 'Renovações de habitações',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Renovações de escritórios',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Exteriores e fachadas',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Tectos e pisos',
+        icon: 'tabler:checkbox',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/refurb.jpg',
+      alt: 'Imagem de Renovação',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Renovações</h3>
+      Transforme o seu espaço com os nossos serviços de renovação. Na Casa Concepts, revitalizamos interiores e exteriores, preservando a essência da sua propriedade enquanto adicionamos modernidade e funcionalidade. Cada projeto é tratado com o máximo cuidado para superar as expectativas.
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    id="insulation"
+    items={[
+      {
+        title: 'Isolamento exterior',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Isolamento interior',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Isolamento acústico',
+        icon: 'tabler:checkbox',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/insulation.jpg',
+      alt: 'Imagem de Isolamento',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Isolamento</h3>
+      Melhore o conforto e a eficiência energética da sua casa com as nossas soluções de isolamento. Oferecemos métodos inovadores para reduzir a perda de energia, assegurar temperaturas ideais e reduzir os custos de aquecimento e arrefecimento. Um investimento inteligente e sustentável para o futuro.
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Content
+    isAfterContent
+    isReversed
+    id="paint"
+    items={[
+      {
+        title: 'Pintura exterior',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Pintura interior',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Portas e janelas',
+        icon: 'tabler:checkbox',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/paint.jpg',
+      alt: 'Imagem de Pintura',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Pintura</h3>
+      Realçamos a beleza dos seus espaços com serviços profissionais de pintura. Utilizando materiais de alta qualidade e técnicas de aplicação precisas, garantimos acabamentos impecáveis, tanto no interior como no exterior. Adicione cor e vida ao seu projeto com a Casa Concepts.
+    </Fragment>
+  </Content>
+
+  <Testimonials
+    title="Opiniões de clientes reais"
+    testimonials={[
+      {
+        testimonial:
+          "O Tony fez um trabalho para nós... e agora, não usamos mais ninguém. Ele resolveu muitos dos nossos problemas. O trabalho dele é de primeira qualidade, ele é muito conhecedor, organizado e explica claramente o que é necessário fazer... e, além disso, é uma pessoa muito simpática. Não hesitamos em recomendar a empresa dele.",
+        name: 'Chris & Ann Reeves',
+        image: {
+          src: '~/assets/images/person.jpg',
+          alt: 'fotografia',
+        },
+      },
+      {
+        testimonial:
+          "O Tony tem sido fantástico nos nossos projetos de renovação em curso para a nossa casa em Vienne. Recentemente substituímos o telhado do celeiro e instalámos estores. O celeiro foi um trabalho especialmente desafiador, que exigiu planeamento cuidadoso, competências e experiência. O Tony e a equipa fizeram um trabalho maravilhoso e mantiveram-nos informados em todas as etapas. Recomendo vivamente o Tony para todos os seus projetos!",
+        name: 'Natalie Stewart',
+        image: {
+          src: '~/assets/images/person.jpg',
+          alt: 'fotografia',
+        },
+      },
+      {
+        testimonial:
+          "Depois de contactar o Tony, ficámos muito satisfeitos com a rapidez da resposta, o envio do orçamento e a definição de uma data para começar o trabalho. O trabalho foi concluído rapidamente e com um padrão muito elevado, estamos muito felizes com o resultado... recomendamo-lo para trabalhos de canalização aos nossos amigos e clientes.",
+        name: 'L Hopkins',
+        image: {
+          src: '~/assets/images/person.jpg',
+          alt: 'fotografia',
+        },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'secondary',
+        text: 'Contacte-nos',
+        href: getPermalink('/contact'),
+      },
+    ]}
+    title="Entre em contacto connosco"
+    subtitle="Temos a certeza de oferecer um preço justo para as suas necessidades"
+  />
+</Layout>

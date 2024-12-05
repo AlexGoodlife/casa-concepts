@@ -1,0 +1,67 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Sobre nós',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <!-- Stats Widget ****************** -->
+
+  <Content
+    isReversed
+    tagline="Sobre nós"
+    title='"Construindo sonhos, um passo de cada vez"'
+    image={{
+      src: '~/assets/images/hands.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Somente com a melhor qualidade</h3>
+Na Casa Concepts, cada projeto é um testemunho do nosso compromisso com a excelência. Seguimos os mais elevados padrões da indústria, garantindo qualidade, durabilidade e precisão em cada detalhe. Desde os materiais que selecionamos até às técnicas que aplicamos, o nosso objetivo é superar expectativas e entregar espaços que inspirem. Com um foco na inovação e no artesanato, construímos não apenas estruturas, mas também confiança e satisfação. Experimente a diferença de trabalhar com os melhores.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-page dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Stats
+    title="Estatísticas sobre nós"
+    subtitle="Experiente e Capaz"
+    stats={[
+      { title: 'Escritórios', amount: '2' },
+      { title: 'Anos de experiência', amount: '37' },
+      { title: 'Projectos', amount: '1000' },
+      { title: 'Clientes', amount: '700' },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Peça orçamento',
+        href: getPermalink('contact'),
+        target: '_blank',
+        icon: 'tabler:arrow-right',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="sm:whitespace-nowrap">Casa Concepts </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Não hesite em contactar!
+    </Fragment>
+  </CallToAction>
+</Layout>
