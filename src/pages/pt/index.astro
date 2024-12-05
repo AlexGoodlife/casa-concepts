@@ -40,44 +40,45 @@ const metadata = {
     tagline="Serviços"
     title="O que nós ofereçemos"
     subtitle="Na Casa Concepts, dedicamo-nos à remodelação e redesign de interiores, criando ambientes únicos que refletem a personalidade e as necessidades dos nossos clientes."
+    classes = {{container: "text-justify"}}
     items={[
       {
-        title: 'Construction',
+        title: 'Construção',
         description:
           'Oferecemos serviços de construção personalizados, transformando ideias em realidade. Desde o planeamento até à entrega final, garantimos uma execução de alta qualidade, com atenção ao detalhe e cumprimento de prazos. Quer se trate de uma nova construção ou de uma ampliação, criamos espaços que combinam funcionalidade e design.',
         image: '~/assets/images/construction.jpg',
         href: getPermalink('/services') + '#construction',
       },
       {
-        title: 'Swimming pools',
+        title: 'Piscinas',
         description:
           'Dê um toque especial à sua propriedade com as nossas soluções de construção e renovação de piscinas. Projetamos piscinas que combinam estilo, durabilidade e eficiência, adaptadas às necessidades de cada cliente. Desde estruturas modernas a designs clássicos, garantimos um oásis deslumbrante no seu jardim.',
         image: '~/assets/images/pool.jpg',
         href: getPermalink('/services') + '#pools',
       },
       {
-        title: 'Refurbishing',
+        title: 'Renovações',
         description:
           'Transforme o seu espaço com os nossos serviços de renovação. Na Casa Concepts, revitalizamos interiores e exteriores, preservando a essência da sua propriedade enquanto adicionamos modernidade e funcionalidade. Cada projeto é realizado com a máxima atenção para superar as expectativas.',
         image: '~/assets/images/refurb.jpg',
         href: getPermalink('/services') + '#refurbishing',
       },
       {
-        title: 'Painting',
+        title: 'Pintura',
         description:
           'Realçamos a beleza dos seus espaços com serviços profissionais de pintura. Utilizando materiais de alta qualidade e técnicas de aplicação precisas, garantimos acabamentos impecáveis, seja em interiores ou exteriores. Adicione cor e vida ao seu projeto com a Casa Concepts.',
         image: '~/assets/images/paint.jpg',
         href: getPermalink('/services') + '#paint',
       },
       {
-        title: 'Insulation',
+        title: 'Isolamento',
         description:
           "Melhore o conforto e a eficiência energética da sua casa com as nossas soluções de isolamento. Oferecemos métodos inovadores para reduzir perdas de energia, garantir temperaturas ideais e baixar os custos de aquecimento e arrefecimento. Um investimento inteligente e sustentável para o futuro.",
         image: '~/assets/images/insulation.jpg',
         href: getPermalink('/services') + '#insulation',
       },
       {
-        title: 'New Projects, New Dreams',
+        title: 'Novos projetos, novos sonhos',
         description:
           'Cada projeto é uma oportunidade de criar algo único e especial. Na Casa Concepts, acreditamos que cada construção é mais do que apenas uma obra – é a concretização de sonhos. Seja uma renovação, uma piscina ou uma nova construção, trabalhamos para dar vida às suas ideias com dedicação, qualidade e inovação. Vamos construir juntos os seus novos sonhos!',
         image: '~/assets/images/house3.jpg',
@@ -92,6 +93,7 @@ const metadata = {
   isReversed
   tagline="Padrões"
   title="Os nossos padrões de serviço e qualidade" 
+  classes = {{container: "text-justify"}}
   items={[
     {
       title: 'Planeamento claro e organizado',
@@ -118,6 +120,7 @@ const metadata = {
 
 <Content
   isAfterContent
+  classes = {{container: "text-justify"}}
   items={[
     {
       title: 'Transparência e Comunicação Constante',
@@ -147,9 +150,9 @@ const metadata = {
 
 <FAQs
   title="Perguntas Frequentes"
-  subtitle="Explore as perguntas abaixo para descobrir as poderosas funcionalidades que a Casa Concepts oferece e como podem elevar o seu projeto."
+  subtitle="Explore as perguntas abaixo para descobrir as poderosas funcionalidades que a Casa Concepts oferece."
   tagline="FAQs"
-  classes={{ container: 'max-w-6xl' }}
+  classes={{ container: 'max-w-6xl text-justify' }}
   items={[
     {
       title: 'Qual é o custo estimado do meu projeto?',
