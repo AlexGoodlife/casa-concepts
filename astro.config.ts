@@ -23,7 +23,8 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
-  site: 'casaconcepts.pt',
+  // site: 'https://alexgoodlife.github.io',
+  site: 'https://casaconcepts.pt',
   // base: 'site-ricardo',
 
   integrations: [
