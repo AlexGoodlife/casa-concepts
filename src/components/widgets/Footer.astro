@@ -48,7 +48,7 @@ const translatePath = useTranslatedPath(lang);
                 {index !== 0 ? ' · ' : ''}
                 <a
                   class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                  href={href}
+                  href={translatePath(href)}
                   set:html={t(text)}
                 />
               </>
@@ -66,7 +66,7 @@ const translatePath = useTranslatedPath(lang);
                   <li class="mb-2">
                     <a
                       class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-                      href={href}
+                      href={translatePath(href)}
                       aria-label={ariaLabel}
                     >
                       <Fragment set:html={t(text)} />
@@ -88,7 +88,7 @@ const translatePath = useTranslatedPath(lang);
                 <a
                   class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                   aria-label={ariaLabel}
-                  href={href}
+                  href={translatePath(href)}
                 >
                   {icon && <Icon name={icon} class="w-5 h-5" />}
                   <Fragment set:html={t(text)} />
