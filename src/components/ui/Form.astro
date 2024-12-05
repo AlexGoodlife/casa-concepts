@@ -5,7 +5,11 @@ import Button from '~/components/ui/Button.astro';
 const { inputs, textarea, disclaimer, button = 'nav.contact', description = '' } = Astro.props;
 ---
 
-<form>
+<form action="https://api.web3forms.com/submit" method="POST">
+ <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+<!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="863e00f2-d873-426b-94cf-4fbf67445b4e">
   {
     inputs &&
       inputs.map(

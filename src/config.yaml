@@ -1,6 +1,6 @@
 site:
   name: Casa Concepts
-  site: 'https://alexgoodlife.github.io'
+  site: 'casaconcepts.pt'
   base: '/'
   trailingSlash: true
 
