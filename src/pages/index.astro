@@ -30,20 +30,20 @@ const metadata = {
       },
       { text: 'Learn more', href: getPermalink('/about') },
     ]}
-    image={{ src: '~/assets/images/hero_main.jpg', alt: 'House Hero Image' , layout: "cover"}}
+    image={{ src: '~/assets/images/hero_main2.jpg', alt: 'House Hero Image', layout: 'cover' }}
   >
     <Fragment slot="title">
-      <span class = "text-heading">Building dreams </span>
+      <span class="text-heading">Building dreams </span>
       <span class="text-accented dark:text-white highlight"> one step at a time </span>
     </Fragment>
 
     <!-- <Fragment slot="subtitle"> -->
-      <!-- <span class="hidden sm:inline"> -->
-      <!--   <span class="font-semibold">Casa Concepts </span> Something something something something something :))).</span -->
-      <!-- > -->
-      <!-- <span class="block mb-1 sm:hidden font-bold text-blue-600">Casa Concepts : slogan.</span> -->
-      <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis -->
-      <!-- vitae molestias maxime recusandae eligendi vero, voluptatem ipsam, ex minima assumenda aspernatur voluptatum. -->
+    <!-- <span class="hidden sm:inline"> -->
+    <!--   <span class="font-semibold">Casa Concepts </span> Something something something something something :))).</span -->
+    <!-- > -->
+    <!-- <span class="block mb-1 sm:hidden font-bold text-blue-600">Casa Concepts : slogan.</span> -->
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto eum doloremque fugiat eius assumenda esse? Perspiciatis -->
+    <!-- vitae molestias maxime recusandae eligendi vero, voluptatem ipsam, ex minima assumenda aspernatur voluptatum. -->
     <!-- </Fragment> -->
   </Hero>
 
@@ -52,7 +52,7 @@ const metadata = {
     tagline="Services"
     title="What we can help you with"
     subtitle="At Casa Concepts, we are dedicated to remodelling and redesigning interiors, creating unique environments that reflect the personality and needs of our clients."
-    classes = {{container: "text-justify"}}
+    classes={{ container: 'text-justify' }}
     items={[
       {
         title: 'Construction',
@@ -85,7 +85,7 @@ const metadata = {
       {
         title: 'Insulation',
         description:
-          "Improve the comfort and energy efficiency of your home with our insulation solutions. We offer innovative methods to reduce energy loss, ensure optimal temperatures, and lower heating and cooling costs. A smart and sustainable investment for the future.",
+          'Improve the comfort and energy efficiency of your home with our insulation solutions. We offer innovative methods to reduce energy loss, ensure optimal temperatures, and lower heating and cooling costs. A smart and sustainable investment for the future.',
         image: '~/assets/images/insulation.jpg',
         href: getPermalink('/services') + '#insulation',
       },
@@ -104,7 +104,7 @@ const metadata = {
   <Content
     isReversed
     tagline="Standards"
-    title="Our standards for service and quality" 
+    title="Our standards for service and quality"
     items={[
       {
         title: 'Clear and Organised Planning',
@@ -141,8 +141,7 @@ const metadata = {
     items={[
       {
         title: 'Transparency and Constant Communication',
-        description:
-          'We are always available to address queries, from the simplest to the most important decisions.',
+        description: 'We are always available to address queries, from the simplest to the most important decisions.',
       },
       {
         title: 'Personalisation and Flexibility',
@@ -150,8 +149,7 @@ const metadata = {
       },
       {
         title: 'Commitment to Safety',
-        description:
-          'Confidence that the team is protected and the project environment is safe for everyone',
+        description: 'Confidence that the team is protected and the project environment is safe for everyone',
       },
     ]}
     image={{
@@ -166,7 +164,6 @@ const metadata = {
     </Fragment>
   </Content>
 
-
   <!-- FAQs Widget ******************* -->
 
   <FAQs
@@ -178,7 +175,7 @@ const metadata = {
       {
         title: 'What is the estimated cost of my project?',
         description:
-          "The cost depends on various factors, such as the size of the project, chosen materials, level of customisation, and technical requirements. After an initial and detailed analysis of your needs, we will provide a clear and transparent quote with no surprises.",
+          'The cost depends on various factors, such as the size of the project, chosen materials, level of customisation, and technical requirements. After an initial and detailed analysis of your needs, we will provide a clear and transparent quote with no surprises.',
       },
       {
         title: 'What is the timeframe for completing the project?',
@@ -188,22 +185,22 @@ const metadata = {
       {
         title: 'What are the steps involved in the construction process?',
         description:
-        "The process typically includes: planning and permits, architectural and technical design, land preparation and foundations, structural construction, interior and exterior finishes, final inspection and delivery.",
+          'The process typically includes: planning and permits, architectural and technical design, land preparation and foundations, structural construction, interior and exterior finishes, final inspection and delivery.',
       },
       {
-        title: "Does the company have the required licences and certifications?",
+        title: 'Does the company have the required licences and certifications?',
         description:
-          "Yes, we are a fully licensed and certified company capable of executing construction projects. We also adhere to all safety standards and local regulations to ensure your project is legally compliant.",
+          'Yes, we are a fully licensed and certified company capable of executing construction projects. We also adhere to all safety standards and local regulations to ensure your project is legally compliant.',
       },
       {
         title: 'How is communication managed during the project?',
         description:
-          "We maintain constant communication with our clients through regular meetings, progress reports, and updates via email or phone. We are always available to address any concerns or accommodate new requests.",
+          'We maintain constant communication with our clients through regular meetings, progress reports, and updates via email or phone. We are always available to address any concerns or accommodate new requests.',
       },
       {
         title: 'What guarantees are offered after the project is completed?',
         description:
-          "We provide guarantees on the quality of materials and workmanship, in accordance with legal standards. If any issues arise after completion, our team will be available to carry out necessary repairs or adjustments within the warranty period.",
+          'We provide guarantees on the quality of materials and workmanship, in accordance with legal standards. If any issues arise after completion, our team will be available to carry out necessary repairs or adjustments within the warranty period.',
       },
     ]}
   />
@@ -217,6 +214,39 @@ const metadata = {
       { title: 'Years of Experience', amount: '37' },
     ]}
   />
+
+  <!-- Business Partners Section -->
+  <Content
+    tagline="Partners"
+    title="Our Business Partners"
+    items={[
+      {
+        title: 'Red Pin Company',
+        description: 'We are proud to partner with Red Pin Company to help with our innovative construction methods.',
+        callToAction: {
+          text: 'Visit Red Pin Company Resources',
+          href: 'https://www.redpincompany.com/resources',
+          target: '_blank',
+          variant: 'secondary',
+        },
+        icon: 'tabler:pin',
+      },
+    ]}
+  >
+    <Fragment slot="image">
+      <div style="display:flex;justify-content:center;">
+        <div style="position:relative;width:100%;max-width:700px;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe
+            src="https://www.youtube.com/embed/J13X21GtYiE?si=b-tejIkVSHXpGd55"
+            title="Red Pin Company Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+        </div>
+      </div>
+    </Fragment>
+  </Content>
 
   <!-- CallToAction Widget *********** -->
 
@@ -235,8 +265,6 @@ const metadata = {
       <span class="sm:whitespace-nowrap">Casa Concepts </span>
     </Fragment>
 
-    <Fragment slot="subtitle">
-      Building dreams one step at a time
-    </Fragment>
+    <Fragment slot="subtitle"> Building dreams one step at a time </Fragment>
   </CallToAction>
 </Layout>

@@ -26,13 +26,12 @@ const metadata = {
       },
       { text: 'Saiba mais', href: getPermalink('/about') },
     ]}
-    image={{ src: '~/assets/images/hero_main.jpg', alt: 'House Hero Image' , layout: "cover"}}
+    image={{ src: '~/assets/images/hero_main2.jpg', alt: 'House Hero Image', layout: 'cover' }}
   >
     <Fragment slot="title">
-      <span class = "text-heading">Construindo sonhos</span>
+      <span class="text-heading">Construindo sonhos</span>
       <span class="text-accented dark:text-white highlight"> um passo de cada vez </span>
     </Fragment>
-
   </Hero>
 
   <Services
@@ -40,7 +39,7 @@ const metadata = {
     tagline="Serviços"
     title="O que nós ofereçemos"
     subtitle="Na Casa Concepts, dedicamo-nos à remodelação e redesign de interiores, criando ambientes únicos que refletem a personalidade e as necessidades dos nossos clientes."
-    classes = {{container: "text-justify"}}
+    classes={{ container: 'text-justify' }}
     items={[
       {
         title: 'Construção',
@@ -73,7 +72,7 @@ const metadata = {
       {
         title: 'Isolamento',
         description:
-          "Melhore o conforto e a eficiência energética da sua casa com as nossas soluções de isolamento. Oferecemos métodos inovadores para reduzir perdas de energia, garantir temperaturas ideais e baixar os custos de aquecimento e arrefecimento. Um investimento inteligente e sustentável para o futuro.",
+          'Melhore o conforto e a eficiência energética da sua casa com as nossas soluções de isolamento. Oferecemos métodos inovadores para reduzir perdas de energia, garantir temperaturas ideais e baixar os custos de aquecimento e arrefecimento. Um investimento inteligente e sustentável para o futuro.',
         image: '~/assets/images/insulation.jpg',
         href: getPermalink('/services') + '#insulation',
       },
@@ -89,103 +88,104 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-<Content
-  isReversed
-  tagline="Padrões"
-  title="Os nossos padrões de serviço e qualidade" 
-  classes = {{container: "text-justify"}}
-  items={[
-    {
-      title: 'Planeamento claro e organizado',
-      description: 'A organização é essencial para evitar atrasos e surpresas.',
-    },
-    {
-      title: 'Conformidade com Leis e Regulamentos',
-      description: 'Desfrute da tranquilidade de saber que o seu projeto está 100% em conformidade.',
-    },
-    {
-      title: 'Soluções Sustentáveis e Económicas',
-      description: 'Soluções modernas e ecológicas que fazem toda a diferença.',
-    },
-  ]}
-  image={{
-    src: '~/assets/images/blueprint.jpg',
-    alt: 'Imagem colorida',
-  }}
->
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-</Content>
+  <Content
+    isReversed
+    tagline="Padrões"
+    title="Os nossos padrões de serviço e qualidade"
+    classes={{ container: 'text-justify' }}
+    items={[
+      {
+        title: 'Planeamento claro e organizado',
+        description: 'A organização é essencial para evitar atrasos e surpresas.',
+      },
+      {
+        title: 'Conformidade com Leis e Regulamentos',
+        description: 'Desfrute da tranquilidade de saber que o seu projeto está 100% em conformidade.',
+      },
+      {
+        title: 'Soluções Sustentáveis e Económicas',
+        description: 'Soluções modernas e ecológicas que fazem toda a diferença.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/blueprint.jpg',
+      alt: 'Imagem colorida',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
-<Content
-  isAfterContent
-  classes = {{container: "text-justify"}}
-  items={[
-    {
-      title: 'Transparência e Comunicação Constante',
-      description:
-        'Estamos sempre disponíveis para esclarecer dúvidas, desde as mais simples até às decisões mais importantes.',
-    },
-    {
-      title: 'Personalização e Flexibilidade',
-      description: 'Adapte facilmente o modelo à identidade e requisitos da sua marca, tornando o seu website distinto e economizando tempo.',
-    },
-    {
-      title: 'Compromisso com a Segurança',
-      description: 'Confiança de que a equipa está protegida e o ambiente do projeto é seguro para todos.',
-    },
-  ]}
-  image={{
-    src: '~/assets/images/concrete.jpg',
-    alt: 'Imagem de projeto',
-  }}
->
-  <Fragment slot="content">Garantimos também</Fragment>
+  <Content
+    isAfterContent
+    classes={{ container: 'text-justify' }}
+    items={[
+      {
+        title: 'Transparência e Comunicação Constante',
+        description:
+          'Estamos sempre disponíveis para esclarecer dúvidas, desde as mais simples até às decisões mais importantes.',
+      },
+      {
+        title: 'Personalização e Flexibilidade',
+        description:
+          'Adapte facilmente o modelo à identidade e requisitos da sua marca, tornando o seu website distinto e economizando tempo.',
+      },
+      {
+        title: 'Compromisso com a Segurança',
+        description: 'Confiança de que a equipa está protegida e o ambiente do projeto é seguro para todos.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/concrete.jpg',
+      alt: 'Imagem de projeto',
+    }}
+  >
+    <Fragment slot="content">Garantimos também</Fragment>
 
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-</Content>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
-<FAQs
-  title="Perguntas Frequentes"
-  subtitle="Explore as perguntas abaixo para descobrir as poderosas funcionalidades que a Casa Concepts oferece."
-  tagline="FAQs"
-  classes={{ container: 'max-w-6xl text-justify' }}
-  items={[
-    {
-      title: 'Qual é o custo estimado do meu projeto?',
-      description:
-        'O custo depende de vários fatores, como o tamanho do projeto, materiais escolhidos, nível de personalização e requisitos técnicos. Após uma análise inicial detalhada das suas necessidades, forneceremos um orçamento claro e transparente, sem surpresas.',
-    },
-    {
-      title: 'Qual é o prazo de conclusão do projeto?',
-      description:
-        'O prazo varia de acordo com a complexidade e a escala do projeto. Durante a fase de planeamento inicial, estabelecemos um cronograma detalhado que abrange todas as etapas da construção, mantendo-o sempre informado.',
-    },
-    {
-      title: 'Quais são as etapas envolvidas no processo de construção?',
-      description:
-        'O processo inclui, geralmente: Planeamento e licenças, Design arquitetónico e técnico, Preparação do terreno e fundações, Construção estrutural, Acabamentos interiores e exteriores, Inspeção final e entrega.',
-    },
-    {
-      title: 'A empresa possui as licenças e certificações necessárias?',
-      description:
-        'Sim, somos uma empresa totalmente licenciada e certificada para executar projetos de construção. Também seguimos todas as normas de segurança e regulamentos locais para garantir que o seu projeto está em conformidade com a lei.',
-    },
-    {
-      title: 'Como é gerida a comunicação durante o projeto?',
-      description:
-        'Mantemos uma comunicação constante com os nossos clientes através de reuniões regulares, relatórios de progresso e atualizações por e-mail ou telefone. Estamos sempre disponíveis para esclarecer dúvidas ou acomodar novos pedidos.',
-    },
-    {
-      title: 'Que garantias são oferecidas após a conclusão do projeto?',
-      description:
-        'Oferecemos garantias sobre a qualidade dos materiais e da mão-de-obra, de acordo com as normas legais. Se surgirem problemas após a conclusão, a nossa equipa estará disponível para realizar os reparos ou ajustes necessários dentro do período de garantia.',
-    },
-  ]}
-/>
+  <FAQs
+    title="Perguntas Frequentes"
+    subtitle="Explore as perguntas abaixo para descobrir as poderosas funcionalidades que a Casa Concepts oferece."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl text-justify' }}
+    items={[
+      {
+        title: 'Qual é o custo estimado do meu projeto?',
+        description:
+          'O custo depende de vários fatores, como o tamanho do projeto, materiais escolhidos, nível de personalização e requisitos técnicos. Após uma análise inicial detalhada das suas necessidades, forneceremos um orçamento claro e transparente, sem surpresas.',
+      },
+      {
+        title: 'Qual é o prazo de conclusão do projeto?',
+        description:
+          'O prazo varia de acordo com a complexidade e a escala do projeto. Durante a fase de planeamento inicial, estabelecemos um cronograma detalhado que abrange todas as etapas da construção, mantendo-o sempre informado.',
+      },
+      {
+        title: 'Quais são as etapas envolvidas no processo de construção?',
+        description:
+          'O processo inclui, geralmente: Planeamento e licenças, Design arquitetónico e técnico, Preparação do terreno e fundações, Construção estrutural, Acabamentos interiores e exteriores, Inspeção final e entrega.',
+      },
+      {
+        title: 'A empresa possui as licenças e certificações necessárias?',
+        description:
+          'Sim, somos uma empresa totalmente licenciada e certificada para executar projetos de construção. Também seguimos todas as normas de segurança e regulamentos locais para garantir que o seu projeto está em conformidade com a lei.',
+      },
+      {
+        title: 'Como é gerida a comunicação durante o projeto?',
+        description:
+          'Mantemos uma comunicação constante com os nossos clientes através de reuniões regulares, relatórios de progresso e atualizações por e-mail ou telefone. Estamos sempre disponíveis para esclarecer dúvidas ou acomodar novos pedidos.',
+      },
+      {
+        title: 'Que garantias são oferecidas após a conclusão do projeto?',
+        description:
+          'Oferecemos garantias sobre a qualidade dos materiais e da mão-de-obra, de acordo com as normas legais. Se surgirem problemas após a conclusão, a nossa equipa estará disponível para realizar os reparos ou ajustes necessários dentro do período de garantia.',
+      },
+    ]}
+  />
 
   <!-- Stats Widget ****************** -->
 
@@ -196,6 +196,40 @@ const metadata = {
       { title: 'Anos de experiência', amount: '37' },
     ]}
   />
+
+  <!-- Business Partners Section -->
+  <Content
+    tagline="Parcerios"
+    title="Os nossos parceiros"
+    items={[
+      {
+        title: 'Red Pin Company',
+        description:
+          'Estamos orgulhosos de colaborar com a Red Pin Company para prestar os nossos serviços inovadores de construção',
+        callToAction: {
+          text: 'Visit a Red Pin Company',
+          href: 'https://www.redpincompany.com/resources',
+          target: '_blank',
+          variant: 'secondary',
+        },
+        icon: 'tabler:pin',
+      },
+    ]}
+  >
+    <Fragment slot="image">
+      <div style="display:flex;justify-content:center;">
+        <div style="position:relative;width:100%;max-width:700px;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe
+            src="https://www.youtube.com/embed/J13X21GtYiE?si=b-tejIkVSHXpGd55"
+            title="Red Pin Company Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+        </div>
+      </div>
+    </Fragment>
+  </Content>
 
   <!-- CallToAction Widget *********** -->
 
@@ -214,8 +248,6 @@ const metadata = {
       <span class="sm:whitespace-nowrap">Casa Concepts </span>
     </Fragment>
 
-    <Fragment slot="subtitle">
-      Construindo sonhos, um passo de cada vez
-    </Fragment>
+    <Fragment slot="subtitle"> Construindo sonhos, um passo de cada vez </Fragment>
   </CallToAction>
 </Layout>
